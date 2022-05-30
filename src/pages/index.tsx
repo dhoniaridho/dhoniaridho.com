@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <main className="mt-20">
         <section className="relative min-h-[calc(100vh-5rem)] container mx-auto w-full px-5">
           <div className="py-4 pb-32 sm:pb-0 md:py-10">
-            <div className="w-full rounded-lg bg-sky-100 min-h-[25rem] md:flex px-10 py-16 gap-10 space-y-5">
+            <div className="w-full rounded-lg bg-sky-100 min-h-[25rem] md:flex px-5 md:px-10 py-16 gap-10 space-y-5">
               <div className="flex-1">
                 <h3 className="text-4xl md:text-5xl font-extrabold">Ahmad Ridhoni</h3>
                 <h3 className="text-xl md:text-3xl font-bold mt-3">
