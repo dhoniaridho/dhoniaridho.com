@@ -26,15 +26,15 @@ const Home: NextPage = () => {
         </div>
       </header>
       <main className="mt-20">
-        <section className="relative h-[calc(100vh-5rem)] container mx-auto w-full px-5">
-          <div className="py-4 md:py-10">
+        <section className="relative min-h-[calc(100vh-5rem)] container mx-auto w-full px-5">
+          <div className="py-4 pb-32 sm:pb-0 md:py-10">
             <div className="w-full rounded-lg bg-sky-100 min-h-[25rem] md:flex px-10 py-16 gap-10 space-y-5">
               <div className="flex-1">
-                <h3 className="text-5xl font-extrabold">Ahmad Ridhoni</h3>
-                <h3 className="text-3xl font-bold mt-3">
+                <h3 className="text-4xl md:text-5xl font-extrabold">Ahmad Ridhoni</h3>
+                <h3 className="text-xl md:text-3xl font-bold mt-3">
                   Design, Development, Ship
                 </h3>
-                <p className="text-xl mt-5 font-light">
+                <p className="md:text-xl mt-5 font-light">
                   I&apos;m {getAge("2001/07/18")} year old a full-stack
                   developer with a passion for building beautiful, performant
                   user interfaces.
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
         <section className="bg-amber-200 py-20">
           <div className="container mx-auto w-full px-5">
             <div className="py-10 md:flex gap-10 space-y-8">
-              <div className="w-96 space-y-5">
+              <div className="md:w-96 space-y-5">
                 <h3 className="text-5xl font-extrabold uppercase">
                   Service i Offer <sub className="font-light"> /2</sub>
                 </h3>
@@ -96,10 +96,10 @@ const Home: NextPage = () => {
                   rem labore architecto doloribus!
                 </p>
               </div>
-              <div className="flex-1 grid grid-cols-2 gap-10 flex-wrap">
+              <div className="flex-1 grid sm:grid-cols-2 gap-10 flex-wrap">
                 <div className="border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">1/</h5>
-                  <h5 className="font-bold text-4xl mt-3">
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
                     Frontend Development
                   </h5>
                   <p className="inline-flex gap-2 items-center text-lg mt-3">
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex-1 border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">2/</h5>
-                  <h5 className="font-bold text-4xl mt-3">
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
                     Backend Development
                   </h5>
                   <p className="inline-flex gap-2 items-center text-lg mt-3">
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">3/</h5>
-                  <h5 className="font-bold text-4xl mt-3">
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
                     Fullstack Development
                   </h5>
                   <p className="inline-flex gap-2 items-center text-lg mt-3">
@@ -173,10 +173,10 @@ const Home: NextPage = () => {
                 </li>
               </ul>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 max-w-full">
               <h3 className="text-3xl font-extrabold uppercase">Skill</h3>
               <p className="font-bold">Frontend</p>
-              <ul className="flex gap-5">
+              <ul className="flex gap-5 flex-wrap">
                 <li>
                   <div className="w-20 h-20 bg-green-500 rounded-lg shadow-lg shadow-green-200 mb-4"></div>
                   <p>Tailwind CSS</p>
@@ -195,7 +195,7 @@ const Home: NextPage = () => {
                 </li>
               </ul>
               <p className="font-bold">Backend</p>
-              <ul className="flex gap-5">
+              <ul className="flex gap-5 flex-wrap">
                 <li>
                   <div className="w-20 h-20 bg-green-500 rounded-lg shadow-lg shadow-green-200 mb-4"></div>
                   <p>Express JS</p>
@@ -218,7 +218,7 @@ const Home: NextPage = () => {
                 </li>
               </ul>
               <p className="font-bold">Programming Language</p>
-              <ul className="flex gap-5">
+              <ul className="flex gap-5 flex-wrap">
                 <li>
                   <div className="w-20 h-20 bg-green-500 rounded-lg shadow-lg shadow-green-200 mb-4"></div>
                   <p>Javascript</p>
