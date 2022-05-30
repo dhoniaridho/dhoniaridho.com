@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <header className="fixed inset-0 z-50 w-full top-0 h-20">
-        <div className="container mx-auto h-full flex items-center justify-between">
+        <div className="container mx-auto h-full flex items-center justify-between px-5">
           <h1 className="text-3xl font-extrabold">D</h1>
           <nav>
             <ul className="flex gap-5">
@@ -26,9 +26,9 @@ const Home: NextPage = () => {
         </div>
       </header>
       <main className="mt-20">
-        <section className="relative h-[calc(100vh-5rem)] container mx-auto w-full">
-          <div className="py-10">
-            <div className="w-full rounded-lg bg-sky-100 min-h-[25rem] flex px-10 py-16 gap-10">
+        <section className="relative h-[calc(100vh-5rem)] container mx-auto w-full px-5">
+          <div className="py-4 md:py-10">
+            <div className="w-full rounded-lg bg-sky-100 min-h-[25rem] md:flex px-10 py-16 gap-10 space-y-5">
               <div className="flex-1">
                 <h3 className="text-5xl font-extrabold">Ahmad Ridhoni</h3>
                 <h3 className="text-3xl font-bold mt-3">
@@ -54,7 +54,7 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 h-96">
                 <iframe
                   className="rounded-lg"
                   src="https://my.spline.design/macbookprocopy-7c85c3e239a4471dc5558dc850139459/"
@@ -65,12 +65,12 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center rotate-90 mr-5 absolute right-0 bottom-10 origin-right">
-            <div className="w-40 border" />
+          <div className="flex items-center justify-center rotate-90 mr-5 absolute right-0 bottom-0 md:bottom-10 origin-right">
+            <div className="w-40 border hidden md:block" />
             <p className="px-5">Scroll Down</p>
           </div>
-          <div className="flex items-center justify-center gap-5 absolute left-0 bottom-10 text-2xl">
-            <div className="text-lg mr-5">Checkout My</div>
+          <div className="flex items-center justify-center gap-5 absolute left-0 bottom-10 text-2xl px-5">
+            <div className="text-lg mr-5 hidden md:block">Checkout My</div>
             <button className="px-3 py-3 bg-slate-100 rounded-lg">
               <BsGithub />
             </button>
@@ -83,8 +83,8 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="bg-amber-200 py-20">
-          <div className="container mx-auto w-full">
-            <div className="py-10 flex gap-10">
+          <div className="container mx-auto w-full px-5">
+            <div className="py-10 md:flex gap-10 space-y-8">
               <div className="w-96 space-y-5">
                 <h3 className="text-5xl font-extrabold uppercase">
                   Service i Offer <sub className="font-light"> /2</sub>
@@ -131,8 +131,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="container mx-auto w-full mt-20 py-20">
-          <div className="grid grid-cols-2 grid-rows-2 gap-x-10">
+        <section className="container mx-auto w-full mt-20 px-5 py-10 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10">
             <div className="space-y-4">
               <h3 className="text-4xl font-extrabold uppercase">
                 Skill & Experience
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                 placeat perspiciatis aliquid ut dignissimos.
               </p>
             </div>
-            <div className="row-span-2 border-l pl-10">
+            <div className="row-span-2 md:border-l md:pl-10">
               <h3 className="text-3xl font-extrabold uppercase">Experience</h3>
               <ul className="mt-10">
                 <li className="flex border-t-4 border-black py-5">
@@ -244,19 +244,19 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <div className="container mx-auto py-20">
+          <div className="container mx-auto py-10 md:py-20 px-5">
             <h3 className="text-center text-4xl font-extrabold uppercase">
               Latest Project <sub className="font-light"> /4</sub>
             </h3>
-            <ul className="grid grid-cols-3 gap-5 mt-20">
-              <li className="bg-yellow-300 w-full aspect-[3/4]"></li>
-              <li className="bg-yellow-300 w-full aspect-[3/4]"></li>
-              <li className="bg-yellow-300 w-full aspect-[3/4]"></li>
+            <ul className="grid md:grid-cols-3 gap-5 mt-20">
+              <li className="bg-yellow-300 w-full aspect-[3/4] rounded-lg"></li>
+              <li className="bg-yellow-300 w-full aspect-[3/4] rounded-lg"></li>
+              <li className="bg-yellow-300 w-full aspect-[3/4] rounded-lg"></li>
             </ul>
           </div>
         </section>
-        <section className="bg-amber-200">
-          <div className="container mx-auto flex py-20 h-96">
+        <section className="bg-amber-200 px-5">
+          <div className="container mx-auto md:flex py-20 h-96 space-y-10">
             <div className="flex-1">
               <h3 className="text-3xl font-extrabold uppercase">
                 Ready to get started?
@@ -276,7 +276,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <footer>
-            <div className="container mx-auto flex py-20 font-bold">
+            <div className="container mx-auto flex h-20 items-center md:py-20 font-bold md:text-left text-center">
               &copy; dhoniaridho 2022- All Rights Reserved
             </div>
           </footer>
