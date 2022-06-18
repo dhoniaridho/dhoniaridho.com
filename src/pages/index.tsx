@@ -3,13 +3,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import { animated, useSpring } from "react-spring";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsFacebook,
-  BsArrowUpRight,
-  BsArrowDown,
-} from "react-icons/bs";
+import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +40,7 @@ const Home: NextPage = () => {
   ];
 
   return (
-    <div className="bg-slate-900">
+    <div className="bg-slate-900 max-w-full overflow-x-hidden">
       <header className="sticky inset-0 z-50 w-full top-0 h-20 bg-slate-900/20 backdrop-blur-md">
         <div className="container mx-auto h-full flex items-center justify-between px-5">
           <nav className="flex items-center justify-between w-full z-40">
