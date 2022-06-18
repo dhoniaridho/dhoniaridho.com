@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { animated, useSpring } from "react-spring";
 import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
+import Me from "@/assets/images/me.jpg";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -124,8 +125,8 @@ const Home: NextPage = () => {
         </div>
       </header>
       <main className="bg-white">
-        <section className="h-[calc(100vh-5rem)] text-white relative bg-slate-900">
-          <div className="container mx-auto px-5">
+        <section className="h-[calc(100vh-5rem)] text-white relative bg-slate-900 relative">
+          <div className="container mx-auto w-full h-full px-5 relative z-20">
             <div className="absolute bottom-44">
               <h1 className="text-5xl font-extrabold text-white uppercase">
                 Ahmad Ridhoni
@@ -158,9 +159,15 @@ const Home: NextPage = () => {
               <BsArrowDown className="animate-bounce w-5" />
             </div>
           </div>
+          <div className="w-full h-screen bg-slate-900/90 absolute inset-0 z-[3]"></div>
+          <div
+            className="w-full h-screen bg-cover bg-center absolute inset-0 z-0"
+            style={{ backgroundImage: `url('${Me.src}')` }}
+          />
+          <div className="absolute w-full h-screen"></div>
         </section>
         <section className="bg-[#46e891] text-slate-900 py-20">
-          <div className="container mx-auto w-full px-5">
+          <div className="container mx-auto w-full px-5 relative">
             <div className="py-10 md:flex gap-10 space-y-8">
               <div className="md:w-96 space-y-5">
                 <h3 className="text-5xl font-extrabold uppercase">
