@@ -23,15 +23,16 @@ const Home: NextPage = () => {
                 interfaces.
               </p>
               <ul className="mt-10 inline-flex gap-3">
-                <li>
-                  <button
-                    type="button"
-                    className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium text-sm px-7 py-3 md:py-5 md:px-12 text-center mr-2 mb-2"
-                  >
-                    Contact Me
-                  </button>
+                <li className="flex items-center">
+                  <Link href="/contact">
+                    <a className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
+                      <span className="relative px-7 py-3 md:py-5 md:px-12 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0">
+                        Contact Me
+                      </span>
+                    </a>
+                  </Link>
                 </li>
-                <li>
+                <li className="flex items-center">
                   <Link href="/projects">
                     <a className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
                       <span className="relative px-7 py-3  md:py-5 md:px-12 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0">
