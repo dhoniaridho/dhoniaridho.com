@@ -154,7 +154,7 @@ const MainLayout = (props: any) => {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: "linear", delay: 0.3, duration: 1.5 }}
+          transition={{ type: "linear", delay: 0.4, duration: 1.5 }}
           className="w-full h-screen fixed z-50 inset-0 bg-slate-500 delay-500 transition border-opacity-20"
           style={{
             backgroundColor: "rgb(100 116 139)",
@@ -166,7 +166,7 @@ const MainLayout = (props: any) => {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: "linear", delay: 0.7, duration: 1.5 }}
+          transition={{ type: "linear", delay: 0.6, duration: 1.5 }}
           className="w-full h-screen fixed z-50 inset-0 bg-slate-400"
           style={{
             backgroundColor: "rgb(148 163 184)",
