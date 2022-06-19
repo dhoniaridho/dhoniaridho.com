@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { animated, useSpring } from "react-spring";
-import { motion } from "framer-motion";
+import { motion, LazyMotion } from "framer-motion";
 
 const MainLayout = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,51 +129,51 @@ const MainLayout = (props: any) => {
           </div>
         </header>
         <main className="bg-white">{props.children}</main>
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", delay: 0.1, duration: 1.5 }}
+          className="w-full h-screen fixed z-50 inset-0 bg-slate-900"
+        />
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", delay: 0.2, duration: 1.5 }}
+          className="w-full h-screen fixed z-50 inset-0 bg-slate-700"
+          style={{
+            backgroundColor: "rgb(51 65 85)",
+            top: 0,
+          }}
+        />
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", delay: 0.3, duration: 1.5 }}
+          className="w-full h-screen fixed z-50 inset-0 bg-slate-500 delay-500 transition border-opacity-20"
+          style={{
+            backgroundColor: "rgb(100 116 139)",
+            top: 0,
+          }}
+        />
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", delay: 0.7, duration: 1.5 }}
+          className="w-full h-screen fixed z-50 inset-0 bg-slate-400"
+          style={{
+            backgroundColor: "rgb(148 163 184)",
+            top: 0,
+          }}
+        />
       </div>
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ type: "linear", delay: 0.1, duration: 1.5 }}
-        className="w-full h-screen fixed z-50 inset-0 bg-slate-900"
-      />
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ type: "linear", delay: 0.2, duration: 1.5 }}
-        className="w-full h-screen fixed z-50 inset-0 bg-slate-700"
-        style={{
-          backgroundColor: "rgb(51 65 85)",
-          top: 0,
-        }}
-      />
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ type: "linear", delay: 0.3, duration: 1.5 }}
-        className="w-full h-screen fixed z-50 inset-0 bg-slate-500 delay-500 transition border-opacity-20"
-        style={{
-          backgroundColor: "rgb(100 116 139)",
-          top: 0,
-        }}
-      />
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ type: "linear", delay: 0.7, duration: 1.5 }}
-        className="w-full h-screen fixed z-50 inset-0 bg-slate-400"
-        style={{
-          backgroundColor: "rgb(148 163 184)",
-          top: 0,
-        }}
-      />
     </>
   );
 };
