@@ -33,7 +33,7 @@ const Projects = () => {
 
   return (
     <MainLayout>
-      <section className="min-h-screen bg-slate-900 py-20">
+      <section className="min-h-screen bg-slate-900 px-5 md:px-0 py-20">
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-white">Projects</h1>
           <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">

@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <section className="h-[calc(100vh-5rem)] text-white bg-slate-900 relative">
           <div className="container mx-auto w-full h-full px-5 relative z-20">
             <div className="absolute bottom-44">
-              <h1 className="text-5xl font-extrabold text-white uppercase">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-white uppercase">
                 Ahmad Ridhoni
               </h1>
               <p className="md:text-xl mt-5 font-light">
