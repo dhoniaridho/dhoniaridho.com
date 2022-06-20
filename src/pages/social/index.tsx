@@ -7,3 +7,5 @@ const Social = () => {
     </MainLayout>
   );
 };
+
+export default Social;
