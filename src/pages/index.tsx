@@ -1,8 +1,6 @@
 import getAge from "@/helpers/getMyAge";
 import type { NextPage } from "next";
 import Link from "next/link";
-import { useState } from "react";
-import { animated, useSpring } from "react-spring";
 import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
 import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
@@ -11,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-slate-900 max-w-full overflow-x-hidden">
       <MainLayout>
-        <section className="h-[calc(100vh-5rem)] text-white relative bg-slate-900 relative">
+        <section className="h-[calc(100vh-5rem)] text-white bg-slate-900 relative">
           <div className="container mx-auto w-full h-full px-5 relative z-20">
             <div className="absolute bottom-44">
               <h1 className="text-3xl md:text-5xl font-extrabold text-white uppercase">
@@ -287,12 +285,14 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className="flex-1 flex justify-center items-center">
-              <button className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <span className="relative px-7 py-3  md:py-5 md:px-12 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0 flex gap-3 items-center">
-                  Get Started{" "}
-                  <BsArrowUpRight className="group-hover:rotate-45 transition-all" />
-                </span>
-              </button>
+              <Link href="/contact">
+                <a className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
+                  <span className="relative px-7 py-3  md:py-5 md:px-12 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0 flex gap-3 items-center">
+                    Get Started{" "}
+                    <BsArrowUpRight className="group-hover:rotate-45 transition-all" />
+                  </span>
+                </a>
+              </Link>
             </div>
           </div>
           <footer>

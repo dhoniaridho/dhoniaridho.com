@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import MainLayout from "@/layouts/main.layout";
 import { useState } from "react";
 import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
@@ -35,11 +36,11 @@ const Projects = () => {
       <section className="min-h-screen bg-slate-900 px-5 md:px-0 py-20">
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-white">Projects</h1>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="max-w-sm bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+                className="bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
               >
                 <a href="#">
                   <img
