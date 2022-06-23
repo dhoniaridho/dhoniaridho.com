@@ -20,8 +20,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: pnpm/action-setup@v2.2.2
     - run: cd ./
+    - uses: pnpm/action-setup@v2.2.2
     - run: pnpm install --frozen-lockfile
     - run: pnpm run build --if-present
     - run: pnpm lint
