@@ -12,6 +12,7 @@ specifiers:
   eslint-config-next: 12.1.6
   framer-motion: ^6.3.11
   next: 12.1.6
+  next-seo: ^5.4.0
   polished: ^4.2.2
   postcss: ^8.4.14
   react: 18.1.0
@@ -27,6 +28,7 @@ dependencies:
   '@react-spring/web': 9.4.5_ef5jwxihqo6n7gxfmzogljlgcm
   framer-motion: 6.3.11_ef5jwxihqo6n7gxfmzogljlgcm
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
+  next-seo: 5.4.0_2mgcgz5qhsdxw4fgpqzqeafmkq
   polished: 4.2.2
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -1916,6 +1918,18 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
+
+  /next-seo/5.4.0_2mgcgz5qhsdxw4fgpqzqeafmkq:
+    resolution: {integrity: sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
 
   /next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
