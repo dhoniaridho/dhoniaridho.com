@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { animated, useSpring } from "react-spring";
-import { motion, LazyMotion } from "framer-motion";
+import { motion } from "framer-motion";
+import { NextSeo } from "next-seo";
 
 const MainLayout = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +46,11 @@ const MainLayout = (props: any) => {
 
   return (
     <>
+      <NextSeo
+        title="Ahmad Ridhoni"
+        description="dhoniaridho(c)2022 Portfolio"
+        defaultTitle="Ahmad Ridhoni  %s"
+      />
       <div className="bg-slate-900 max-w-full overflow-x-hidden">
         <header className="sticky inset-0 z-50 w-full top-0 h-20 bg-slate-900/20 backdrop-blur-md">
           <div className="container mx-auto h-full flex items-center justify-between px-5">
