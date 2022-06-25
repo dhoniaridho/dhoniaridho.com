@@ -2,6 +2,7 @@ import "@/assets/css/globals.css";
 import type { AppProps } from "next/app";
 import { AnimatePresence, domAnimation, LazyMotion } from "framer-motion";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -15,6 +16,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-BND8XMV7PT"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BND8XMV7PT');
+        `}
+      </Script>
     </LazyMotion>
   );
 }
