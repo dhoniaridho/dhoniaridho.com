@@ -16,9 +16,8 @@ const Home: NextPage = () => {
                 Ahmad Ridhoni
               </h1>
               <p className="md:text-xl mt-5 font-light">
-                I&apos;m {getAge("2001/07/18")} year old a full-stack developer
-                with a passion for building beautiful, performant user
-                interfaces.
+                I&apos;m {getAge("2001/07/18")} year old a full-stack developer with a passion for
+                building beautiful, performant user interfaces.
               </p>
               <ul className="mt-10 inline-flex gap-3">
                 <li className="flex items-center">
@@ -61,48 +60,32 @@ const Home: NextPage = () => {
                   Service i Offer <sub className="font-light"> /2</sub>
                 </h3>
                 <p>
-                  With more than a decade of experience, Locomotive has become a
-                  leader in digital experiences, web design and branding. That’s
-                  not a brag, it’s a promise: to deliver tomorrow’s creative
-                  solutions — today. Learn more
+                  With more than a decade of experience, Locomotive has become a leader in digital
+                  experiences, web design and branding. That’s not a brag, it’s a promise: to
+                  deliver tomorrow’s creative solutions — today. Learn more
                 </p>
               </div>
               <div className="flex-1 grid sm:grid-cols-2 gap-10 flex-wrap">
                 <div className="border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">1/</h5>
-                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
-                    Frontend Development
-                  </h5>
-                  <a
-                    role="button"
-                    className="inline-flex gap-2 items-center text-lg mt-3 group"
-                  >
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">Frontend Development</h5>
+                  <a role="button" className="inline-flex gap-2 items-center text-lg mt-3 group">
                     Explore
                     <BsArrowUpRight className="group-hover:rotate-45 transition-transform group-hover:focus:translate-x-2" />
                   </a>
                 </div>
                 <div className="flex-1 border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">2/</h5>
-                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
-                    Backend Development
-                  </h5>
-                  <a
-                    role="button"
-                    className="inline-flex gap-2 items-center text-lg mt-3 group"
-                  >
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">Backend Development</h5>
+                  <a role="button" className="inline-flex gap-2 items-center text-lg mt-3 group">
                     Explore
                     <BsArrowUpRight className="group-hover:rotate-45 transition-transform group-hover:focus:translate-x-2" />
                   </a>
                 </div>
                 <div className="border-t-4 border-black">
                   <h5 className="font-semibold mt-2 text-2xl">3/</h5>
-                  <h5 className="font-bold text-2xl md:text-4xl mt-3">
-                    Fullstack Development
-                  </h5>
-                  <a
-                    role="button"
-                    className="inline-flex gap-2 items-center text-lg mt-3 group"
-                  >
+                  <h5 className="font-bold text-2xl md:text-4xl mt-3">Fullstack Development</h5>
+                  <a role="button" className="inline-flex gap-2 items-center text-lg mt-3 group">
                     Explore
                     <BsArrowUpRight className="group-hover:rotate-45 transition-transform group-hover:focus:translate-x-2" />
                   </a>
@@ -119,10 +102,9 @@ const Home: NextPage = () => {
                 <sub className="font-light"> /3</sub>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci vel rerum itaque corporis, accusantium eaque repellat
-                nobis aperiam dolor nostrum vitae quae odio consectetur earum
-                placeat perspiciatis aliquid ut dignissimos.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel rerum itaque
+                corporis, accusantium eaque repellat nobis aperiam dolor nostrum vitae quae odio
+                consectetur earum placeat perspiciatis aliquid ut dignissimos.
               </p>
             </div>
             <div className="row-span-2 md:border-l md:pl-10">
@@ -145,9 +127,7 @@ const Home: NextPage = () => {
                 <li className="flex border-t-4 border-black py-5">
                   <div className="w-40 font-semibold">2021-Present</div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold">
-                      Freelance Frontend Developer
-                    </h3>
+                    <h3 className="text-xl font-bold">Freelance Frontend Developer</h3>
                   </div>
                 </li>
               </ul>
@@ -203,10 +183,7 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <div className="w-20 h-20 rounded-lg flex justify-center items-center mb-4">
-                    <img
-                      src="https://docs.nestjs.com/assets/logo-small.svg"
-                      alt=""
-                    />
+                    <img src="https://docs.nestjs.com/assets/logo-small.svg" alt="" />
                   </div>
                   <p>Nest JS</p>
                 </li>
@@ -231,10 +208,7 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <div className="w-20 h-20 rounded-lg flex justify-center items-center mb-4">
-                    <img
-                      src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png"
-                      alt=""
-                    />
+                    <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" alt="" />
                   </div>
                   <p>My SQL</p>
                 </li>
@@ -261,10 +235,7 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <div className="w-20 h-20 rounded-lg flex justify-center items-center mb-4">
-                    <img
-                      src="https://www.php.net/images/logos/new-php-logo.svg"
-                      alt=""
-                    />
+                    <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="" />
                   </div>
                   <p>PHP</p>
                 </li>
@@ -276,20 +247,17 @@ const Home: NextPage = () => {
         <section className="bg-slate-900 text-slate-100 px-5">
           <div className="container mx-auto md:flex py-20 h-96 space-y-10">
             <div className="flex-1">
-              <h3 className="text-3xl font-extrabold uppercase">
-                Ready to get started?
-              </h3>
+              <h3 className="text-3xl font-extrabold uppercase">Ready to get started?</h3>
               <p className="text-xl font-light mt-8 text-slate-300">
-                I&apos;m currently looking for new opportunities. If you&apos;re
-                interested in working with me, please get in touch.
+                I&apos;m currently looking for new opportunities. If you&apos;re interested in
+                working with me, please get in touch.
               </p>
             </div>
             <div className="flex-1 flex justify-center items-center">
               <Link href="/contact">
                 <a className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
                   <span className="relative px-7 py-3  md:py-5 md:px-12 transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0 flex gap-3 items-center">
-                    Get Started{" "}
-                    <BsArrowUpRight className="group-hover:rotate-45 transition-all" />
+                    Get Started <BsArrowUpRight className="group-hover:rotate-45 transition-all" />
                   </span>
                 </a>
               </Link>
