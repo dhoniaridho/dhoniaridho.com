@@ -8,14 +8,13 @@ const Projects = () => {
     {
       id: 1,
       name: "DPM Poltekkes Semarang",
-      description:
-        "Project web for organization DPM Poltekkes Semarang, using ReactJS and NextJS",
+      description: "Project web for organization DPM Poltekkes Semarang, using ReactJS and NextJS",
       image: "https://picsum.photos/id/1/200/300",
       link: "https://www.dpmpoltekkessmg.com",
       tags: ["React JS", "Next JS", "Tailwind CSS"],
       date: "2020-01-01",
       category: "Frontend Development",
-      technologies: ["React JS", "Rest API", "Next JS"],
+      technologies: ["React JS", "Rest API", "Next JS"]
     },
     {
       id: 1,
@@ -27,8 +26,8 @@ const Projects = () => {
       tags: ["Laravel", "Alpine JS", "Tailwind CSS"],
       date: "2020-01-01",
       category: "Frontend Development",
-      technologies: ["React JS", "Rest API", "Next JS"],
-    },
+      technologies: ["React JS", "Rest API", "Next JS"]
+    }
   ]);
 
   return (
@@ -40,13 +39,9 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-              >
+                className="bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                  <img
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
+                  <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </a>
                 <div className="p-5 space-y-5">
                   <a href="#">
@@ -61,8 +56,7 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
-                      >
+                        className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                         {tag}
                       </span>
                     ))}
@@ -71,8 +65,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white px-5 py-2 gap-3"
-                  >
+                    className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white px-5 py-2 gap-3">
                     Open
                     <BsArrowRight className="group-hover:-rotate-45 transition-all" />
                   </a>
