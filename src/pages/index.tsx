@@ -8,7 +8,7 @@ import MainLayout from "@/layouts/main.layout";
 const Home: NextPage = () => {
   return (
     <div className="bg-slate-900 max-w-full overflow-x-hidden">
-      <MainLayout>
+      <MainLayout className="bg-slate-900">
         <section className="h-[calc(100vh-5rem)] text-white bg-slate-900 relative">
           <div className="container mx-auto w-full h-full px-5 relative z-20">
             <div className="absolute bottom-44">
@@ -60,9 +60,8 @@ const Home: NextPage = () => {
                   Service i Offer <sub className="font-light"> /2</sub>
                 </h3>
                 <p>
-                  With more than a decade of experience, Locomotive has become a leader in digital
-                  experiences, web design and branding. That’s not a brag, it’s a promise: to
-                  deliver tomorrow’s creative solutions — today. Learn more
+                  I’m a Full-Stack Developer located in Yogyakarta. I have a serious passion for UI
+                  effects, animations and creating intuitive, dynamic user experiences.
                 </p>
               </div>
               <div className="flex-1 grid sm:grid-cols-2 gap-10 flex-wrap">
@@ -94,7 +93,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full px-5 py-10 md:py-20 pattern-geometric bg-opacity-5 bg-white relative">
+        <section className="w-full px-5 py-10 md:py-20 pattern-geometric bg-opacity-5 bg-white text-white relative">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10 z-10 relative">
             <div className="space-y-4">
               <h3 className="text-4xl font-extrabold uppercase">
@@ -102,29 +101,30 @@ const Home: NextPage = () => {
                 <sub className="font-light"> /3</sub>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel rerum itaque
-                corporis, accusantium eaque repellat nobis aperiam dolor nostrum vitae quae odio
-                consectetur earum placeat perspiciatis aliquid ut dignissimos.
+                I create successful responsive websites that are fast, easy to use, and built with
+                best practices. The main area of my expertise is front-end development, HTML, CSS,
+                JS, building small and medium web apps, features, animations, and coding interactive
+                layouts.
               </p>
             </div>
             <div className="row-span-2 md:border-l md:pl-10">
               <h3 className="text-3xl font-extrabold uppercase">Experience</h3>
               <ul className="mt-10">
-                <li className="flex border-t-4 border-black py-5">
+                <li className="flex border-t-4 border-white py-5">
                   <div className="w-40 font-semibold">2019-2020</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold">Graphic Designer</h3>
                     <h6>Explora Digital Print</h6>
                   </div>
                 </li>
-                <li className="flex border-t-4 border-black py-5">
+                <li className="flex border-t-4 border-white py-5">
                   <div className="w-40 font-semibold">2021-Present</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold">Frontend Developer</h3>
                     <h6>Transisi Teknologi Mandiri</h6>
                   </div>
                 </li>
-                <li className="flex border-t-4 border-black py-5">
+                <li className="flex border-t-4 border-white py-5">
                   <div className="w-40 font-semibold">2021-Present</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold">Freelance Frontend Developer</h3>
@@ -242,7 +242,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
           </div>
-          <div className="bg-gradient-to-tr from-white/60 to-white/40 w-full h-full absolute z-0 inset-0" />
+          <div className="bg-gradient-to-tr from-slate-700/60 to-black/40 w-full h-full absolute z-0 inset-0" />
         </section>
         <section className="bg-slate-900 text-slate-100 px-5">
           <div className="container mx-auto md:flex py-20 h-96 space-y-10">
@@ -263,11 +263,6 @@ const Home: NextPage = () => {
               </Link>
             </div>
           </div>
-          <footer>
-            <div className="container mx-auto flex h-20 items-center md:py-20 font-bold md:text-left text-center">
-              &copy; dhoniaridho 2022 - All Rights Reserved
-            </div>
-          </footer>
         </section>
       </MainLayout>
     </div>
