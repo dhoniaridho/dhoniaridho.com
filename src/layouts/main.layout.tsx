@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { animated, useSpring } from "react-spring";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
@@ -33,6 +33,14 @@ const MainLayout = (props: any) => {
       href: "/projects"
     }
   ];
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [isOpen]);
 
   const variants = {
     hidden: { x: "100%", y: 0 },
