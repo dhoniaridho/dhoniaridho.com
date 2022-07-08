@@ -104,13 +104,39 @@ const Home: NextPage = () => {
                 soluta rerum eligendi a fugiat consectetur veritatis molestias cumque est, harum
                 voluptatibus alias excepturi. Inventore iure consectetur animi?
               </p>
-              <ul className="mt-5">
-                <li>Web Development</li>
-                <li>Web Maintainance</li>
+              <ul className="mt-5 space-y-2">
+                <li className="flex gap-2 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-[#46e891]"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Web Development
+                </li>
+                <li className="flex gap-2 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-[#46e891]"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Web Maintainance
+                </li>
               </ul>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="aspect-square shadow-xl rounded-lg p-5">
+              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -126,14 +152,29 @@ const Home: NextPage = () => {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold">Frontend Developement</h4>
-                <p className="font-light text-sm mt-2">
-                  Front-end web development is the development of the graphical user interface of a
-                  website, through the use of HTML, CSS, and JavaScript, so that users can view and
-                  interact with that website.
-                </p>
+                <div className="flex-1">
+                  <h4 className="text-xl font-bold">Frontend Developement</h4>
+                  <p className="font-light text-xs mt-2">
+                    Front-end web development is the development of the graphical user interface of
+                    a website, through the use of HTML, CSS, and JavaScript, so that users can view
+                    and interact with that website.
+                  </p>
+                </div>
+                <div>
+                  <ul className="flex gap-2 text-xs uppercase">
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">HTML</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">CSS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">JAVASCRIPT</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="aspect-square shadow-xl rounded-lg p-5">
+              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -149,15 +190,33 @@ const Home: NextPage = () => {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold">Backend Developement</h4>
-                <p className="font-light text-sm mt-2">
-                  Backend developers build code that allows a database and an application to
-                  communicate with one another. Backend developers take care and maintain the
-                  back-end of a website, Including databases, servers, and apps, and they control
-                  what you don t see.
-                </p>
+                <div className="flex-1">
+                  <h4 className="text-xl font-bold">Backend Developement</h4>
+                  <p className="font-light text-xs mt-2">
+                    Backend developers build code that allows a database and an application to
+                    communicate with one another. Backend developers take care and maintain the
+                    back-end of a website, Including databases, servers, and apps, and they control
+                    what you don t see.
+                  </p>
+                </div>
+                <div>
+                  <ul className="flex gap-2 text-xs uppercase">
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">Node JS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">PHP</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">Deno</span>
+                    </li>
+                    <li className="hidden">
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">Go</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="aspect-square shadow-xl rounded-lg p-5">
+              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,13 +232,37 @@ const Home: NextPage = () => {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold">Fullstack Developement</h4>
-                <p className="font-light text-sm mt-2">
-                  A full stack web developer is a person who can develop both client and server
-                  software. In addition to mastering HTML and CSS, he/she also knows how to: Program
-                  a browser (like using JavaScript, jQuery, Angular, or Vue) Program a server (like
-                  using PHP, ASP, Python, or Node)
-                </p>
+                <div className="flex-1">
+                  <h4 className="text-xl font-bold">Fullstack Developement</h4>
+                  <p className="font-light text-xs mt-2">
+                    A full stack web developer is a person who can develop both client and server
+                    software. In addition to mastering HTML and CSS, he/she also knows how to:
+                    Program a browser (like using JavaScript, jQuery, Angular, or Vue) Program a
+                    server (like using PHP, ASP, Python, or Node)
+                  </p>
+                </div>
+                <div>
+                  <ul className="flex gap-3 text-xs flex-wrap uppercase">
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Laravel</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Vue JS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">React JS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Nest JS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Next JS</span>
+                    </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Nuxt JS</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
