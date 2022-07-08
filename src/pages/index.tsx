@@ -171,6 +171,9 @@ const Home: NextPage = () => {
                     <li>
                       <span className="px-3 py-1 bg-slate-100 rounded-full">JAVASCRIPT</span>
                     </li>
+                    <li>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full">TYPESCRIPT</span>
+                    </li>
                   </ul>
                 </div>
               </div>
