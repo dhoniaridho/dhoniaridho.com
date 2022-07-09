@@ -77,51 +77,53 @@ const MainLayout = (props: any) => {
           className="absolute inset-0 w-full shadow-xl bg-black pattern z-30"
           variants={sidebar}>
           <div className="container mx-auto px-5 py-20 flex items-center h-full relative ">
-            <nav className="flex gap-x-52 text-4xl">
-              <div className="flex flex-1 justify-start flex-col gap-5 min-w-[20rem]">
-                {navigations.map((navigation) => (
-                  <Link key={navigation.name} href={navigation.href}>
-                    <a
-                      onMouseOver={() => setHover(navigation.name)}
-                      onMouseLeave={() => setHover("")}
-                      className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                      {navigation.name}
-                    </a>
-                  </Link>
-                ))}
-              </div>
-              <div>
-                <ul className="space-y-1">
-                  <li>
-                    <Link href="/" locale="id-ID">
+            {isOpen && (
+              <nav className="flex gap-x-52 flex-wrap text-4xl">
+                <div className="flex flex-1 justify-start flex-col gap-5 md:min-w-[20rem]">
+                  {navigations.map((navigation) => (
+                    <Link key={navigation.name} href={navigation.href}>
                       <a
-                        onClick={() => toggleOpen()}
+                        onMouseOver={() => setHover(navigation.name)}
+                        onMouseLeave={() => setHover("")}
                         className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                        Indonesia
+                        {navigation.name}
                       </a>
                     </Link>
-                  </li>
-                  <li>
-                    <Link href="/" locale="en-US">
-                      <a
-                        onClick={() => toggleOpen()}
-                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                        English
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" locale="ko-KR">
-                      <a
-                        onClick={() => toggleOpen()}
-                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                        한국인
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+                  ))}
+                </div>
+                <div className="hidden md:block">
+                  <ul className="space-y-1">
+                    <li>
+                      <Link href="/" locale="id-ID">
+                        <a
+                          onClick={() => toggleOpen()}
+                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                          Indonesia
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/" locale="en-US">
+                        <a
+                          onClick={() => toggleOpen()}
+                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                          English
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/" locale="ko-KR">
+                        <a
+                          onClick={() => toggleOpen()}
+                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                          한국인
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            )}
           </div>
         </motion.div>
       </motion.nav>
