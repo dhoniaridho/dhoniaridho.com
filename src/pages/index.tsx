@@ -1,7 +1,5 @@
-import getAge from "@/helpers/getMyAge";
 import type { GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
-import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
 import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
 import Image from "next/image";

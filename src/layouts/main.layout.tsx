@@ -10,9 +10,10 @@ import {
 } from "framer-motion";
 import { NextSeo } from "next-seo";
 import { useDimensions } from "@/hooks/dimension";
+import { useRouter } from "next/router";
 
 const MainLayout = (props: any) => {
-  const [hover, setHover] = useState("");
+  const router = useRouter();
 
   const navigations = [
     {
@@ -132,12 +133,11 @@ const MainLayout = (props: any) => {
                   {isOpen && (
                     <ul className="space-y-1 flex flex-col">
                       <motion.li
-                        whileHover={{ scale: 1.2 }}
                         initial={{ opacity: 0, y: "100%", x: 0 }}
                         className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
                         animate={onNavigateStart}
                         exit={onNavigateExit}>
-                        <Link href="/" locale="id-ID">
+                        <Link href={router.pathname} locale="id-ID">
                           <a
                             onClick={() => toggleOpen()}
                             className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
@@ -146,12 +146,11 @@ const MainLayout = (props: any) => {
                         </Link>
                       </motion.li>
                       <motion.li
-                        whileHover={{ scale: 1.2 }}
                         initial={{ opacity: 0, y: "200%" }}
                         className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
                         animate={onNavigateStart}
                         exit={onNavigateExit}>
-                        <Link href="/" locale="en-US">
+                        <Link href={router.pathname} locale="en-US">
                           <a
                             onClick={() => toggleOpen()}
                             className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
@@ -160,12 +159,11 @@ const MainLayout = (props: any) => {
                         </Link>
                       </motion.li>
                       <motion.li
-                        whileHover={{ scale: 1.2 }}
                         initial={{ opacity: 0, y: "200%" }}
                         className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
                         animate={onNavigateStart}
                         exit={onNavigateExit}>
-                        <Link href="/" locale="ko-KR">
+                        <Link href={router.pathname} locale="ko-KR">
                           <a
                             onClick={() => toggleOpen()}
                             className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">

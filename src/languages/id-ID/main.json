@@ -20,5 +20,12 @@
     "recentProjects": "Beberapa proyek terbaru saya",
     "getInTouch": "Hubungi saya",
     "getInTouchDescription": "Bagikan ide proyek Anda melalui email di bawah ini atau melalui formulir, dan kami akan segera menghubungi Anda kembali untuk mendiskusikan apa yang dapat kita lakukan bersama."
+  },
+  "About": {
+    "skillAndExperience": "Keahlian dan Pengalaman",
+    "experience": "Pengalaman",
+    "skill": "Keahlian",
+    "language": "Bahasa Program",
+    "shortDescription": "Saya berhasil membuat situs web responsif yang cepat, mudah digunakan, dan dibangun dengan praktik terbaik. Bidang utama keahlian saya adalah pengembangan front-end, HTML, CSS, JS, membangun aplikasi web kecil dan menengah, fitur, animasi, dan pengkodean tata letak interaktif."
   }
 }
