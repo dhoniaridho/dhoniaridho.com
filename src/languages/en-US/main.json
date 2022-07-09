@@ -20,5 +20,12 @@
     "recentProjects": "Some of my recent projects",
     "getInTouch": "Get in touch with me",
     "getInTouchDescription": "Share your project ideas via email below or via the form, and we'll get back to you soon to discuss what we can do together."
+  },
+  "About": {
+    "skillAndExperience": "SKILL & EXPERIENCE",
+    "experience": "EXPERIENCE",
+    "skill": "기술",
+    "language": "Programming Language",
+    "shortDescription": "I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, features, animations, and coding interactive layouts."
   }
 }

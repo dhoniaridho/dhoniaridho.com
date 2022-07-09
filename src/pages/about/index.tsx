@@ -1,22 +1,21 @@
 import MainLayout from "@/layouts/main.layout";
+import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const About = () => {
+  const t = useTranslations("About");
+
   return (
     <MainLayout>
       <section className="w-full px-5 py-10 md:py-20 relative">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10 z-10 relative">
           <div className="space-y-4">
-            <h3 className="text-4xl font-extrabold uppercase">Skill & Experience</h3>
-            <p>
-              I create successful responsive websites that are fast, easy to use, and built with
-              best practices. The main area of my expertise is front-end development, HTML, CSS, JS,
-              building small and medium web apps, features, animations, and coding interactive
-              layouts.
-            </p>
+            <h3 className="text-4xl font-extrabold uppercase">{t("skillAndExperience")}</h3>
+            <p>{t("shortDescription")}</p>
           </div>
           <div className="row-span-2 md:border-l md:pl-10">
-            <h3 className="text-3xl font-extrabold uppercase">Experience</h3>
+            <h3 className="text-3xl font-extrabold uppercase">{t("experience")}</h3>
             <ul className="mt-10">
               <li className="flex border-t-4 border-slate-500 py-5">
                 <div className="w-40 font-semibold">2019-2020</div>
@@ -71,7 +70,7 @@ const About = () => {
             </ul>
           </div>
           <div className="space-y-4 max-w-full">
-            <h3 className="text-3xl font-extrabold uppercase">Skill</h3>
+            <h3 className="text-3xl font-extrabold uppercase">{t('skill')}</h3>
             <p className="font-bold">Frontend</p>
             <ul className="flex gap-5 flex-wrap text-center">
               <li>
@@ -151,7 +150,7 @@ const About = () => {
                 <p>My SQL</p>
               </li>
             </ul>
-            <p className="font-bold">Programming Language</p>
+            <p className="font-bold">{t("language")}</p>
             <ul className="flex gap-5 flex-wrap text-center">
               <li>
                 <div className="w-20 h-20 rounded-lg flex justify-center items-center mb-4">
@@ -186,3 +185,11 @@ const About = () => {
 };
 
 export default About;
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`@/languages/${locale}/main.json`)).default
+    }
+  };
+}

@@ -21,6 +21,13 @@
     "getInTouch": "연락해",
     "getInTouchDescription": "아래 이메일이나 양식을 통해 프로젝트 아이디어를 공유하세요. 함께 할 수 있는 일에 대해 논의하기 위해 곧 연락드리겠습니다."
   },
+  "About": {
+    "skillAndExperience": "기술과 경험",
+    "experience": "경험",
+    "skill": "기술",
+    "language": "프로그래밍 언어",
+    "shortDescription": "빠르고 사용하기 쉬우며 모범 사례로 구축된 성공적인 반응형 웹사이트를 만듭니다. 내 전문 분야의 주요 영역은 프론트 엔드 개발, HTML, CSS, JS, 중소 규모 웹 앱 구축, 기능, 애니메이션 및 대화형 레이아웃 코딩입니다."
+  },
   "global": {
     "copyright": "Copyright © 2020. All rights reserved."
   }

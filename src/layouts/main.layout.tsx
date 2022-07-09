@@ -1,12 +1,19 @@
 import Link from "next/link";
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
-import { animated, useSpring } from "react-spring";
-import { motion, useCycle } from "framer-motion";
+import {
+  motion,
+  useCycle,
+  AnimatePresence,
+  Variants,
+  AnimationControls,
+  TargetAndTransition
+} from "framer-motion";
 import { NextSeo } from "next-seo";
 import { useDimensions } from "@/hooks/dimension";
+import { useRouter } from "next/router";
 
 const MainLayout = (props: any) => {
-  const [hover, setHover] = useState("");
+  const router = useRouter();
 
   const navigations = [
     {
@@ -39,13 +46,14 @@ const MainLayout = (props: any) => {
     }
   }, [isOpen]);
 
-  const sidebar = {
+  const sidebar: Variants = {
     open: () => ({
       clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
       transition: {
         type: "spring",
         stiffness: 20,
-        restDelta: 2
+        restDelta: 2,
+        repeatType: "reverse"
       }
     }),
     closed: {
@@ -54,8 +62,31 @@ const MainLayout = (props: any) => {
         delay: 0.5,
         type: "spring",
         stiffness: 400,
-        damping: 40
+        damping: 40,
+        repeatType: "reverse"
       }
+    }
+  };
+
+  const onNavigateStart: TargetAndTransition = {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      type: "tween",
+      staggerChildren: 4,
+      ease: "easeOut",
+      delayChildren: 1
+    }
+  };
+
+  const onNavigateExit: TargetAndTransition = {
+    opacity: 0,
+    y: "200%",
+    transition: {
+      duration: 1,
+      delayChildren: 1,
+      staggerChildren: 4
     }
   };
 
@@ -77,53 +108,74 @@ const MainLayout = (props: any) => {
           className="absolute inset-0 w-full shadow-xl bg-black pattern z-30"
           variants={sidebar}>
           <div className="container mx-auto px-5 py-20 flex items-center h-full relative ">
-            {isOpen && (
-              <nav className="flex gap-x-52 flex-wrap text-4xl">
-                <div className="flex flex-1 justify-start flex-col gap-5 md:min-w-[20rem]">
-                  {navigations.map((navigation) => (
-                    <Link key={navigation.name} href={navigation.href}>
-                      <a
-                        onMouseOver={() => setHover(navigation.name)}
-                        onMouseLeave={() => setHover("")}
-                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                        {navigation.name}
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-                <div className="hidden md:block">
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/" locale="id-ID">
-                        <a
-                          onClick={() => toggleOpen()}
-                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                          Indonesia
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" locale="en-US">
-                        <a
-                          onClick={() => toggleOpen()}
-                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                          English
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" locale="ko-KR">
-                        <a
-                          onClick={() => toggleOpen()}
-                          className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
-                          한국인
-                        </a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            )}
+            <nav className="flex gap-x-52 flex-wrap text-4xl">
+              <div className="flex flex-1 justify-start flex-col gap-5 md:min-w-[20rem]">
+                <AnimatePresence exitBeforeEnter>
+                  {isOpen &&
+                    navigations.map((navigation) => (
+                      <motion.div
+                        key={navigation.name}
+                        whileHover={{ scale: 1.2 }}
+                        initial={{ opacity: 0, y: "200%" }}
+                        className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
+                        animate={onNavigateStart}
+                        exit={onNavigateExit}>
+                        <Link href={navigation.href}>
+                          <a>{navigation.name}</a>
+                        </Link>
+                      </motion.div>
+                    ))}
+                </AnimatePresence>
+              </div>
+
+              <div className="hidden md:block">
+                <AnimatePresence exitBeforeEnter>
+                  {isOpen && (
+                    <ul className="space-y-1 flex flex-col">
+                      <motion.li
+                        initial={{ opacity: 0, y: "100%", x: 0 }}
+                        className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
+                        animate={onNavigateStart}
+                        exit={onNavigateExit}>
+                        <Link href={router.pathname} locale="id-ID">
+                          <a
+                            onClick={() => toggleOpen()}
+                            className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                            Indonesia
+                          </a>
+                        </Link>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, y: "200%" }}
+                        className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
+                        animate={onNavigateStart}
+                        exit={onNavigateExit}>
+                        <Link href={router.pathname} locale="en-US">
+                          <a
+                            onClick={() => toggleOpen()}
+                            className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                            English
+                          </a>
+                        </Link>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, y: "200%" }}
+                        className="text-white font-black uppercase inline hover:text-slate-200 text-left origin-center w-fit"
+                        animate={onNavigateStart}
+                        exit={onNavigateExit}>
+                        <Link href={router.pathname} locale="ko-KR">
+                          <a
+                            onClick={() => toggleOpen()}
+                            className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                            한국인
+                          </a>
+                        </Link>
+                      </motion.li>
+                    </ul>
+                  )}
+                </AnimatePresence>
+              </div>
+            </nav>
           </div>
         </motion.div>
       </motion.nav>
