@@ -1,5 +1,5 @@
 import getAge from "@/helpers/getMyAge";
-import type { NextPage } from "next";
+import type { GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
 import { BsArrowUpRight, BsArrowDown } from "react-icons/bs";
 import Me from "@/assets/images/me.jpg";
@@ -7,10 +7,12 @@ import MainLayout from "@/layouts/main.layout";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const Home: NextPage = () => {
   const tabs = ["All", "Frontend", "Backend"];
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  const t = useTranslations<"Home">("Home");
 
   const PROJECTS = [
     {
@@ -77,33 +79,27 @@ const Home: NextPage = () => {
           </div>
           <div className="md:py-20">
             <div className="mt-20">
-              <p className="text-2xl mb-4">HI I&apos;AM</p>
-              <h1 className="text-5xl font-bold font-serif">Ahmad Ridhoni</h1>
-              <h4 className="mt-5">
-                {getAge("18-July-2001")} year old a full-stack developer with a passion for building
-                beautiful, performant user interfaces. I create successful responsive websites that
-                are fast, easy to use, and built with best practices. The main area of my expertise
-                is front-end development, HTML, CSS, JS, building small and medium web apps,
-                features, animations, and coding interactive layouts.
-              </h4>
+              <p className="text-2xl mb-4">{t("hi")}</p>
+              <h1 className="text-5xl font-bold font-serif">{t("name")}</h1>
+              <h4 className="mt-5">{t("shortDescription")}</h4>
             </div>
             <div className="inline-flex gap-5 mt-10">
-              <button className="bg-[#46e891] text-white shadow-xl shadow-[#46e89263] px-10 py-4">
-                KNOW MORE
-              </button>
-              <button className="border-2 border-[#46e891] px-10 py-4">SHOW PROJECTS</button>
+              <Link href="/about">
+                <a className="bg-[#46e891] text-white shadow-xl shadow-[#46e89263] px-10 py-4">
+                  {t("ctaPrimary")}
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="border-2 border-[#46e891] px-10 py-4">{t("ctaSecondary")}</a>
+              </Link>
             </div>
           </div>
         </section>
         <section className="py-20 px-5">
           <div className="container mx-auto grid md:grid-cols-2 gap-20">
             <div>
-              <h3 className="text-3xl font-semibold mb-5 font-serif">What can I do for you?</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quidem nam animi
-                soluta rerum eligendi a fugiat consectetur veritatis molestias cumque est, harum
-                voluptatibus alias excepturi. Inventore iure consectetur animi?
-              </p>
+              <h3 className="text-3xl font-semibold mb-5 font-serif">{t("services")}</h3>
+              <p>{t("servicesDescription")}</p>
               <ul className="mt-5 space-y-2">
                 <li className="flex gap-2 items-center">
                   <svg
@@ -153,12 +149,8 @@ const Home: NextPage = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-bold">Frontend Developement</h4>
-                  <p className="font-light text-xs mt-2">
-                    Front-end web development is the development of the graphical user interface of
-                    a website, through the use of HTML, CSS, and JavaScript, so that users can view
-                    and interact with that website.
-                  </p>
+                  <h4 className="text-xl font-bold">{t("frontend")}</h4>
+                  <p className="font-light text-xs mt-2">{t("frontendDescription")}</p>
                 </div>
                 <div>
                   <ul className="flex gap-2 text-xs uppercase">
@@ -194,13 +186,8 @@ const Home: NextPage = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-bold">Backend Developement</h4>
-                  <p className="font-light text-xs mt-2">
-                    Backend developers build code that allows a database and an application to
-                    communicate with one another. Backend developers take care and maintain the
-                    back-end of a website, Including databases, servers, and apps, and they control
-                    what you don t see.
-                  </p>
+                  <h4 className="text-xl font-bold">{t("backend")}</h4>
+                  <p className="font-light text-xs mt-2">{t("backendDescription")}</p>
                 </div>
                 <div>
                   <ul className="flex gap-2 text-xs uppercase">
@@ -236,33 +223,40 @@ const Home: NextPage = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-bold">Fullstack Developement</h4>
-                  <p className="font-light text-xs mt-2">
-                    A full stack web developer is a person who can develop both client and server
-                    software. In addition to mastering HTML and CSS, he/she also knows how to:
-                    Program a browser (like using JavaScript, jQuery, Angular, or Vue) Program a
-                    server (like using PHP, ASP, Python, or Node)
-                  </p>
+                  <h4 className="text-xl font-bold">{t("fullStack")}</h4>
+                  <p className="font-light text-xs mt-2">{t("fullstackDescription")}</p>
                 </div>
                 <div>
                   <ul className="flex gap-3 text-xs flex-wrap uppercase">
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Laravel</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        Laravel
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Vue JS</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        Vue JS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">React JS</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        React JS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Nest JS</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        Nest JS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Next JS</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        Next JS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">Nuxt JS</span>
+                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                        Nuxt JS
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -333,14 +327,12 @@ const Home: NextPage = () => {
           <div className="container mx-auto">
             <div>
               <h3 className="text-3xl font-bold leading-loose">
-                Get in touch with me<span className="text-[#46e891]">.</span>
+                {t("getInTouch")}
+                <span className="text-[#46e891]">.</span>
               </h3>
               <div className="border-b border-[#46e891] mb-10 max-w-[10rem] w-full"></div>
             </div>
-            <p className="max-w-lg">
-              Share your project ideas via email below or via the form, and we&apos;ll get back to
-              you soon to discuss what we can do together.
-            </p>
+            <p className="max-w-lg">{t("getInTouchDescription")}</p>
             <p className="mt-8 border-b-2 w-fit">
               <a
                 className="text-2xl md:text-4xl text-[#46e891] font-bold leading-snug"
@@ -406,3 +398,11 @@ function Card(props: any) {
 }
 
 export default Home;
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`@/languages/${locale}/main.json`)).default
+    }
+  };
+}
