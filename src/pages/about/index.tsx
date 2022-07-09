@@ -3,8 +3,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const About = () => {
   return (
-    <MainLayout className="bg-slate-900">
-      <section className="w-full px-5 py-10 md:py-20 text-white relative bg-slate-900">
+    <MainLayout>
+      <section className="w-full px-5 py-10 md:py-20 relative">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10 z-10 relative">
           <div className="space-y-4">
             <h3 className="text-4xl font-extrabold uppercase">Skill & Experience</h3>
@@ -18,24 +18,54 @@ const About = () => {
           <div className="row-span-2 md:border-l md:pl-10">
             <h3 className="text-3xl font-extrabold uppercase">Experience</h3>
             <ul className="mt-10">
-              <li className="flex border-t-4 border-white py-5">
+              <li className="flex border-t-4 border-slate-500 py-5">
                 <div className="w-40 font-semibold">2019-2020</div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold">Graphic Designer</h3>
-                  <h6>Explora Digital Print</h6>
+                  <h6 className="text-xs">Explora Digital Print</h6>
                 </div>
               </li>
-              <li className="flex border-t-4 border-white py-5">
+              <li className="flex border-t-4 border-slate-500 py-5">
                 <div className="w-40 font-semibold">2021-Present</div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold">Frontend Developer</h3>
-                  <h6>Transisi Teknologi Mandiri</h6>
+                  <h6 className="text-xs">Transisi Teknologi Mandiri</h6>
+                  <p className="text-xs text-slate-600 mt-2">
+                    Building Frontend Adago App for{" "}
+                    <a
+                      href="https://www.adaro.com/"
+                      className="text-green-600 hover:underline"
+                      target="_blank"
+                      rel="noreferrer">
+                      Adaro Mining
+                    </a>{" "}
+                    using Vue JS, PHP, SCSS
+                  </p>
                 </div>
               </li>
-              <li className="flex border-t-4 border-white py-5">
+              <li className="flex border-t-4 border-slate-500 py-5">
                 <div className="w-40 font-semibold">2021-Present</div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold">Freelance Frontend Developer</h3>
+                  <h6 className="text-xs">PT Mitra Era Teknologi</h6>
+                  <p className="text-xs text-slate-600 mt-2">
+                    Building App E-Signature dan E-Meterai{" "}
+                    <a
+                      className="text-green-600 hover:underline"
+                      href="https://play.google.com/store/apps/details?id=co.id.momofin.emet"
+                      target="_blank"
+                      rel="noreferrer">
+                      Momofin Go,{" "}
+                    </a>
+                    <a
+                      className="text-green-600 hover:underline"
+                      href="https://play.google.com/store/apps/details?id=co.id.momofin.emet"
+                      target="_blank"
+                      rel="noreferrer">
+                      EMET Mobile App{" "}
+                    </a>
+                    using Vue JS, Typescript.
+                  </p>
                 </div>
               </li>
             </ul>
