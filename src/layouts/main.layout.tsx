@@ -90,6 +90,37 @@ const MainLayout = (props: any) => {
                   </Link>
                 ))}
               </div>
+              <div>
+                <ul className="space-y-1">
+                  <li>
+                    <Link href="/" locale="id-ID">
+                      <a
+                        onClick={() => toggleOpen()}
+                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                        Indonesia
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" locale="en-US">
+                      <a
+                        onClick={() => toggleOpen()}
+                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                        English
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" locale="ko-KR">
+                      <a
+                        onClick={() => toggleOpen()}
+                        className="text-white font-black uppercase inline hover:text-slate-200 tracking-wide hover:tracking-widest transition-all">
+                        한국인
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </motion.div>

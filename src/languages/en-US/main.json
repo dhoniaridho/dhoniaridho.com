@@ -1,0 +1,24 @@
+{
+  "Home": {
+    "hi": "Hi I'am",
+    "name": "Ahmad Ridhoni",
+    "shortDescription": "year old a full-stack developer with a passion for building beautiful, performant user interfaces. I create successful responsive websites that are fast, easy to use, and  built with  best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, features, animations, and coding interactive layouts.",
+    "ctaPrimary": "Learn More",
+    "ctaSecondary": "Contact Me",
+    "services": "What can I do for you?",
+    "servicesDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quidem nam animi soluta rerum eligendi a fugiat consectetur veritatis molestias cumque est, harum voluptatibus alias excepturi. Inventore iure consectetur animi?",
+    "webDevelopent": "Web Development",
+    "webMaintainance": "Web Maintainance",
+    "frontEnd": "Front-End Development",
+    "frontendDescription": "Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.",
+    "backend": "Back-End Development",
+    "backendDescription": "Backend developers build code that allows a database and an application to communicate with one another. Backend developers take care and maintain the back-end of a website, Including databases, servers, and apps, and they control what you don t see.",
+    "fullStack": "Full-Stack Development",
+    "fullstackDescription": "A full stack web developer is a person who can develop both client and server software. In addition to mastering HTML and CSS, he/she also knows how to: Program a browser (like using JavaScript, jQuery, Angular, or Vue) Program a server (like using PHP, ASP, Python, or Node)",
+    "mobile": "Mobile Development",
+    "mobileDescription": "Mobile development is the development of mobile applications for mobile devices. Mobile applications are applications that are designed to run on a mobile device. Mobile applications are designed to be easy to use and easy to understand.",
+    "recentProjects": "Some of my recent projects",
+    "getInTouch": "Get in touch with me",
+    "getInTouchDescription": "Share your project ideas via email below or via the form, and we'll get back to you soon to discuss what we can do together."
+  }
+}
