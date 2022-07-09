@@ -3,7 +3,7 @@ import MainLayout from "@/layouts/main.layout";
 const Contact = () => {
   return (
     <MainLayout>
-      <section className="py-20 dark:bg-slate-900 dark:text-slate-50 min-h-screen">
+      <section className="py-20 min-h-screen">
         <div className=" container mx-auto flex flex-col md:flex-row px-5 gap-y-10 space-y-10">
           <div className="md:w-1/2 flex justify-center place-items-center">
             <dt className="text-center md:-mt-40">
@@ -95,7 +95,7 @@ const Contact = () => {
                     <label htmlFor="">First Name</label>
                     <input
                       placeholder="Full Name"
-                      className="bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                      className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                       type="text"
                     />
                   </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     <label htmlFor="">Last Name</label>
                     <input
                       placeholder="Full Name"
-                      className="bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                      className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                       type="text"
                     />
                   </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   <label htmlFor="">Email</label>
                   <input
                     placeholder="Email"
-                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                     type="text"
                   />
                 </div>
@@ -120,7 +120,7 @@ const Contact = () => {
                   <label htmlFor="">Subject</label>
                   <input
                     placeholder="Subject"
-                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                     type="text"
                   />
                 </div>
@@ -128,11 +128,11 @@ const Contact = () => {
                   <label htmlFor="">Message</label>
                   <textarea
                     placeholder="Message"
-                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-600 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"></textarea>
+                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="relative inline max-w-[14rem] px-8 py-2 uppercase bg-blue-600 dark:shadow-blue-900  text-white shadow-lg hover:brightness-125 hover:shadow-xl shadow-blue-400 hover:shadow-blue-400/20 font-semibold">
+                  className="relative inline max-w-[14rem] px-8 py-2 uppercase bg-blue-600 text-white shadow-lg hover:brightness-125 hover:shadow-xl shadow-blue-400 hover:shadow-blue-400/20 font-semibold">
                   Submit
                 </button>
               </fieldset>
