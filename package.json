@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-spring/parallax": "9.5.1",
-    "@react-spring/web": "9.5.1",
+    "@react-spring/web": "9.5.2",
     "framer-motion": "6.5.1",
     "next": "12.2.3",
     "next-intl": "2.7.4",
