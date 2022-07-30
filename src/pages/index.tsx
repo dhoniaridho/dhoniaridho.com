@@ -67,9 +67,10 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className=" max-w-full overflow-x-hidden">
+    <div className="max-w-full overflow-x-hidden">
       <MainLayout className="relative">
         <section className="container mx-auto min-h-[calc(100vh-5rem)] relative grid md:grid-cols-2 gap-6 md:gap-20 p-10">
+          <div className="w-1/2 aspect-square bg-gradient-to-tr from-violet-200 via-blue-300 to-violet-200 absolute opacity-30 -left-1/4 h-auto -top-10 rounded-full blur-3xl" />
           <div className="h-96 md:h-full">
             <div className="relative rounded-lg w-full h-full overflow-hidden">
               <Image layout="fill" className="object-cover" src={Me.src} alt="Me" />
@@ -93,8 +94,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-20 px-5">
-          <div className="container mx-auto grid md:grid-cols-2 gap-20">
+        <section className="py-20 px-5 relative">
+          <div className="w-1/2 aspect-square blur-3xl bg-gradient-to-tr scale-125 from-red-200 via-blue-300 to-violet-200 absolute opacity-20 -right-1/4 h-auto rounded-full" />
+          <div className="container mx-auto grid md:grid-cols-2 gap-20 relative">
             <div>
               <h3 className="text-3xl font-semibold mb-5 font-serif">{t("services")}</h3>
               <p>{t("servicesDescription")}</p>
@@ -130,7 +132,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +169,7 @@ const Home: NextPage = () => {
                   </ul>
                 </div>
               </div>
-              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +206,7 @@ const Home: NextPage = () => {
                   </ul>
                 </div>
               </div>
-              <div className="aspect-square shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -262,8 +264,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-20 px-5">
-          <div className="container mx-auto">
+        <section className="py-20 px-5 relative">
+          <div className="w-1/2 aspect-square blur-3xl shadow-lg bg-gradient-to-tr from-rose-900 via-blue-300 to-violet-200 absolute opacity-30 -left-1/4 h-auto rounded-full" />
+          <div className="container mx-auto relative">
             <h3 className="text-3xl font-semibold text-center mb-5 font-serif">
               Some of my recent projects
             </h3>
@@ -321,23 +324,28 @@ const Home: NextPage = () => {
             </AnimatePresence>
           </div>
         </section>
-        <section className="py-20 px-5">
-          <div className="container mx-auto">
-            <div>
-              <h3 className="text-3xl font-bold leading-loose">
-                {t("getInTouch")}
-                <span className="text-[#46e891]">.</span>
-              </h3>
-              <div className="border-b border-[#46e891] mb-10 max-w-[10rem] w-full"></div>
+        <section>
+          <div className="container mx-auto relative">
+            <div className="absolute w-full h-full 0">
+              <div className="bg-gradient-to-tr from-violet-300 via-blue-300 to-violet-400 rounded-2xl shadow-md shadow-violet-10 w-full h-full"></div>
             </div>
-            <p className="max-w-lg">{t("getInTouchDescription")}</p>
-            <p className="mt-8 border-b-2 w-fit">
-              <a
-                className="text-2xl md:text-4xl text-[#46e891] font-bold leading-snug"
-                href="mailto:hello@dhoniaridho.com">
-                hello@dhoniaridho.com
-              </a>
-            </p>
+            <div className="relative py-20 px-10">
+              <div>
+                <h3 className="text-4xl font-extrabold leading-loose text-blue-900">
+                  {t("getInTouch")}
+                  <span className="text-blue-900">.</span>
+                </h3>
+                <div className="border-b border-blue-900 mb-10 max-w-[10rem] w-full"></div>
+              </div>
+              <p className="max-w-lg">{t("getInTouchDescription")}</p>
+              <p className="mt-8 border-b-2 border-blue-800 w-fit">
+                <a
+                  className="text-2xl md:text-3xl text-blue-800 font-bold leading-snug"
+                  href="mailto:hello@dhoniaridho.com">
+                  hello@dhoniaridho.com
+                </a>
+              </p>
+            </div>
           </div>
         </section>
       </MainLayout>
