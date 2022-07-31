@@ -13,6 +13,18 @@
   div, section {
     @apply transition-colors ease-out
   }
+  ::selection {
+    @apply bg-pink-500 text-white invert
+  }
+  ::-moz-selection {
+    @apply bg-pink-500 text-white invert
+  }
+  ::-webkit-selection {
+    @apply bg-pink-500 text-white invert
+  }
+  ::-ms-selection {
+    @apply bg-pink-500 text-white invert
+  }
 }
 
 .pattern {

@@ -73,7 +73,7 @@ const Home: NextPage = () => {
     <div className="max-w-full overflow-x-hidden bg-white dark:bg-slate-900">
       <MainLayout className="relative">
         <section className="container mx-auto min-h-[calc(100vh-5rem)] relative grid md:grid-cols-2 gap-6 md:gap-20 p-10 bg-white dark:bg-slate-900">
-          <div className="absolute right-0 bottom-0 space-x-4">
+          <div className="absolute w-full md:w-fit text-center md:right-0 md:bottom-0 -bottom-10 z-20 space-x-4">
             <button onClick={() => setTheme("light")}>Light Mode</button>
             <button onClick={() => setTheme("dark")}>Dark Mode</button>
           </div>
