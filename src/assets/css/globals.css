@@ -10,6 +10,9 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+  div, section {
+    @apply transition-colors ease-out
+  }
 }
 
 .pattern {

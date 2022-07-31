@@ -6,6 +6,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useTheme } from 'next-themes'
 
 const Home: NextPage = () => {
   const tabs = ["All", "Frontend", "Backend"];
@@ -66,10 +67,16 @@ const Home: NextPage = () => {
     show: { opacity: 1 }
   };
 
+  const { theme, setTheme } = useTheme();
+
   return (
-    <div className="max-w-full overflow-x-hidden">
+    <div className="max-w-full overflow-x-hidden bg-white dark:bg-slate-900">
       <MainLayout className="relative">
-        <section className="container mx-auto min-h-[calc(100vh-5rem)] relative grid md:grid-cols-2 gap-6 md:gap-20 p-10">
+        <section className="container mx-auto min-h-[calc(100vh-5rem)] relative grid md:grid-cols-2 gap-6 md:gap-20 p-10 bg-white dark:bg-slate-900">
+          <div className="absolute right-0 bottom-0 space-x-4">
+            <button onClick={() => setTheme("light")}>Light Mode</button>
+            <button onClick={() => setTheme("dark")}>Dark Mode</button>
+          </div>
           <div className="w-1/2 aspect-square bg-gradient-to-tr from-violet-200 via-blue-300 to-violet-200 absolute opacity-30 -left-1/4 h-auto -top-10 rounded-full blur-3xl" />
           <div className="h-96 md:h-full">
             <div className="relative rounded-lg w-full h-full overflow-hidden">
@@ -132,7 +139,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white dark:bg-slate-900 shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,21 +162,29 @@ const Home: NextPage = () => {
                 <div>
                   <ul className="flex gap-2 text-xs uppercase">
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">HTML</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        HTML
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">CSS</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        CSS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">JAVASCRIPT</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        JAVASCRIPT
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">TYPESCRIPT</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        TYPESCRIPT
+                      </span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white dark:bg-slate-900 shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -192,21 +207,29 @@ const Home: NextPage = () => {
                 <div>
                   <ul className="flex gap-2 text-xs uppercase">
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">Node JS</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        Node JS
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">PHP</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        PHP
+                      </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">Deno</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        Deno
+                      </span>
                     </li>
                     <li className="hidden">
-                      <span className="px-3 py-1 bg-slate-100 rounded-full">Go</span>
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+                        Go
+                      </span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col">
+              <div className="aspect-square bg-white dark:bg-slate-900 shadow-xl rounded-lg p-5 flex flex-col">
                 <div className="mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -229,32 +252,32 @@ const Home: NextPage = () => {
                 <div>
                   <ul className="flex gap-3 text-xs flex-wrap uppercase">
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         Laravel
                       </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         Vue JS
                       </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         React JS
                       </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         Nest JS
                       </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         Next JS
                       </span>
                     </li>
                     <li>
-                      <span className="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap">
+                      <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full whitespace-nowrap">
                         Nuxt JS
                       </span>
                     </li>
@@ -279,11 +302,11 @@ const Home: NextPage = () => {
                   onClick={() => handleTabChange(tab)}>
                   {tab === selectedTab ? (
                     <motion.div
-                      className="bg-[#dbffeb] border border-[#46e891] border-dashed px-4  absolute h-full inset-0"
+                      className="bg-[#dbffeb] dark:bg-slate-900 d border border-[#46e891] border-dashed px-4 absolute h-full inset-0"
                       layoutId="underline"
                     />
                   ) : null}
-                  <p className="relative">{tab}</p>
+                  <p className="relative dark:text-white">{tab}</p>
                 </li>
               ))}
             </ul>
@@ -294,13 +317,16 @@ const Home: NextPage = () => {
                 animate="show"
                 className="grid md:grid-cols-3 gap-5 mt-16">
                 {projects.map((project) => (
-                  <motion.div key={project.id} variants={item} className="bg-white border">
+                  <motion.div
+                    key={project.id}
+                    variants={item}
+                    className="bg-white dark:bg-slate-900 dark:text-white border dark:border-slate-700">
                     <a href="#">
                       <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                     </a>
                     <div className="p-5 space-y-5">
                       <a href="#">
-                        <h5 className="mb-2 md:text-2xl font-serif font-bold tracking-tight text-gray-900 truncate">
+                        <h5 className="mb-2 md:text-2xl font-serif font-bold tracking-tight text-gray-900 dark:text-slate-100  truncate">
                           {project.name}
                         </h5>
                       </a>
@@ -309,7 +335,9 @@ const Home: NextPage = () => {
                       </p>
                       <div className="flex gap-3">
                         {project.tags.map((tag) => (
-                          <span key={tag} className="bg-gray-100 text-xs px-3 py-1 rounded-full">
+                          <span
+                            key={tag}
+                            className="bg-gray-100 dark:bg-slate-800 text-xs px-3 py-1 rounded-full">
                             {tag}
                           </span>
                         ))}
@@ -326,10 +354,10 @@ const Home: NextPage = () => {
         </section>
         <section>
           <div className="container mx-auto relative">
-            <div className="absolute w-full h-full 0">
-              <div className="bg-gradient-to-tr from-violet-300 via-blue-300 to-violet-400 rounded-2xl shadow-md shadow-violet-10 w-full h-full"></div>
+            <div className="absolute w-full h-full px-3">
+              <div className="bg-gradient-to-tr from-violet-300 via-blue-300 to-violet-400 rounded-2xl shadow-md shadow-violet-10 w-full h-full container mx-auto "></div>
             </div>
-            <div className="relative py-20 px-10">
+            <div className="relative py-16 px-10">
               <div>
                 <h3 className="text-4xl font-extrabold leading-loose text-blue-900">
                   {t("getInTouch")}
@@ -352,56 +380,6 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-function Card(props: any) {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleActive = () => setIsActive(!isActive);
-
-  const variants = {
-    open: { fill: "red", stroke: "red" },
-    closed: { stroke: "black", fill: "none" }
-  };
-
-  const flipBackVariants = {
-    open: { rotateY: "180deg" },
-    closed: { rotateY: "0deg" }
-  };
-
-  const CardBack = () => <div className="absolute inset-0 flex justify-center items-center"></div>;
-
-  return (
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 1 }}
-      onClick={toggleActive}
-      animate={isActive ? "open" : "close"}
-      variants={flipBackVariants}>
-      <div className="w-48 h-72 bg-white rounded-lg shadow-lg relative p-5 cursor-pointer">
-        <span className="absolute right-5 text-xl font-bold font-serif">{props.stack}</span>
-        <span className="absolute bottom-5 left-5 text-xl font-bold font-serif">{props.stack}</span>
-        <div className="w-full h-full flex justify-center items-center">
-          <motion.div
-            whileTap={{ scale: 1.5 }}
-            animate={isActive ? "open" : "closed"}
-            variants={variants}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-20 w-20"
-              viewBox="0 0 24 24"
-              strokeWidth={1.3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </motion.div>
-        </div>
-      </div>
-    </motion.button>
-  );
-}
 
 export default Home;
 

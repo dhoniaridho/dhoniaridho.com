@@ -4,6 +4,7 @@ import { AnimatePresence, domAnimation, LazyMotion } from "framer-motion";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextIntlProvider } from "next-intl";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -15,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           initial={false}
           presenceAffectsLayout={false}
           onExitComplete={() => window.scrollTo(0, 0)}>
-          <Component {...pageProps} key={router.route} />
+          <ThemeProvider attribute="class">
+            <Component {...pageProps} key={router.route} />
+          </ThemeProvider>
         </AnimatePresence>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BND8XMV7PT"

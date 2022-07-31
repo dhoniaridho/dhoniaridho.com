@@ -95,7 +95,7 @@ const Contact = () => {
                     <label htmlFor="">First Name</label>
                     <input
                       placeholder="Full Name"
-                      className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                      className="bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                       type="text"
                     />
                   </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     <label htmlFor="">Last Name</label>
                     <input
                       placeholder="Full Name"
-                      className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                      className="bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                       type="text"
                     />
                   </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   <label htmlFor="">Email</label>
                   <input
                     placeholder="Email"
-                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                     type="text"
                   />
                 </div>
@@ -120,7 +120,7 @@ const Contact = () => {
                   <label htmlFor="">Subject</label>
                   <input
                     placeholder="Subject"
-                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
+                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"
                     type="text"
                   />
                 </div>
@@ -128,11 +128,11 @@ const Contact = () => {
                   <label htmlFor="">Message</label>
                   <textarea
                     placeholder="Message"
-                    className="bg-slate-50 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"></textarea>
+                    className="bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:bg-opacity-50 backdrop-filter dark:shadow-slate-700 px-4 placeholder:text-sm border py-2  caret-blue-600 focus-within:outline-none focus-within:shadow-blue-100 focus-within:border-blue-300"></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="relative inline max-w-[14rem] px-8 py-2 uppercase bg-blue-600 text-white shadow-lg hover:brightness-125 hover:shadow-xl shadow-blue-400 hover:shadow-blue-400/20 font-semibold">
+                  className="relative inline max-w-[14rem] px-8 py-2 uppercase bg-blue-600 text-white shadow-md hover:brightness-125 hover:shadow-md shadow-blue-600 hover:shadow-blue-400/20 font-semibold">
                   Submit
                 </button>
               </fieldset>

@@ -17,7 +17,7 @@ const Projects = () => {
       technologies: ["React JS", "Rest API", "Next JS"]
     },
     {
-      id: 1,
+      id: 2,
       name: "Admin DPM Poltekkes Semarang",
       description:
         "Project web for organization DPM Poltekkes Semarang, using Laravel, Tailwind CSS & Alpine Js",
@@ -37,12 +37,12 @@ const Projects = () => {
           <h1 className="text-5xl font-bold text-white">Projects</h1>
           <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {projects.map((project) => (
-              <div key={project.id} className="bg-white border border-gray-200 shadow-md">
+              <div key={project.id} className="bg-white dark:bg-slate-900 dark:border-slate-700 border border-gray-200 shadow-md">
                 <a href="#">
                   <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </a>
                 <div className="p-5 space-y-5">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 truncate">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 truncate">
                     {project.name}
                   </h5>
 
