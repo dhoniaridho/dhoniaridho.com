@@ -6,7 +6,8 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { useTheme } from 'next-themes'
+import { useTheme } from "next-themes";
+import getAge from "@/helpers/age";
 
 const Home: NextPage = () => {
   const tabs = ["All", "Frontend", "Backend"];
@@ -87,7 +88,11 @@ const Home: NextPage = () => {
             <div className="mt-20">
               <p className="text-2xl mb-4">{t("hi")}</p>
               <h1 className="text-5xl font-bold font-serif">{t("name")}</h1>
-              <h4 className="mt-5">{t("shortDescription")}</h4>
+              <h4 className="mt-5">
+                {t("shortDescription", {
+                  age: getAge("2001/07/18")
+                })}
+              </h4>
             </div>
             <div className="inline-flex gap-5 mt-10">
               <Link href="/about">
