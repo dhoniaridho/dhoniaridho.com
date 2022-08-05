@@ -1,3 +1,8 @@
+/**
+ * Function that returns the age of a person
+ * @param dateString @example "2001/07/18"
+ * @returns {string}
+ */
 function getAge(dateString: string) {
   var today = new Date();
   var birthDate = new Date(dateString);
