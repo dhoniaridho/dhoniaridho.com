@@ -4,7 +4,7 @@ import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import getAge from "@/helpers/age";
@@ -68,10 +68,10 @@ const Home: NextPage = () => {
     show: { opacity: 1 }
   };
 
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
-    <div className="max-w-full overflow-x-hidden bg-white dark:bg-slate-900">
+    <div className="max-w-full overflow-x-hidden bg-white dark:bg-slate-900 origin-center ">
       <MainLayout className="relative">
         <section className="container mx-auto min-h-[calc(100vh-5rem)] relative grid md:grid-cols-2 gap-6 md:gap-20 p-10 bg-white dark:bg-slate-900">
           <div className="absolute w-full md:w-fit text-center md:right-0 md:bottom-0 -bottom-10 z-20 space-x-4">
@@ -111,7 +111,6 @@ const Home: NextPage = () => {
           <div className="container mx-auto grid md:grid-cols-2 gap-20 relative">
             <div>
               <h3 className="text-3xl font-semibold mb-5 font-serif">{t("services")}</h3>
-              <p>{t("servicesDescription")}</p>
               <ul className="mt-5 space-y-2">
                 <li className="flex gap-2 items-center">
                   <svg

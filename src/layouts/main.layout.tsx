@@ -90,8 +90,29 @@ const MainLayout = (props: any) => {
     }
   };
 
+  const [cursor, setCursor] = useState({
+    x: 0,
+    y: 0
+  });
+
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      setCursor({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", onMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+    };
+  }, [cursor]);
+
   return (
     <>
+      <motion.div
+        style={{
+          top: cursor.y,
+          left: cursor.x
+        }}
+        className="fixed w-8 h-8 bg-white rounded-full shadow-lg inset-0 z-50 opacity-50 ring-4 ring-offset-4 ring-offset-white ring-white"></motion.div>
       <NextSeo
         title="Ahmad Ridhoni"
         description="dhoniaridho(c)2022 Portfolio"
@@ -186,7 +207,9 @@ const MainLayout = (props: any) => {
         xmlns="http://www.w3.org/2000/svg">
         <path d="M12.983 61h.526l.298-.434 16.928-24.655.003-.004L45.4 14.824V61h10.38V1.545H42.395l-.297.44L3.172 59.439 2.115 61h10.868Zm45.911-1v1h8.945V38.557h11.544c.294 0 .585-.003.873-.01l11.8 21.927.282.526h10.349l-.81-1.48L89.475 36.84c.454-.188.893-.391 1.316-.61l.005-.003c3.018-1.581 5.292-3.777 6.776-6.59 1.468-2.782 2.188-5.948 2.188-9.473 0-3.524-.72-6.707-2.185-9.523-1.483-2.85-3.765-5.076-6.802-6.677-3.064-1.634-6.917-2.418-11.502-2.418H58.894V60ZM79.16 30.273H67.84V9.717h11.208c3.01 0 5.33.466 7.025 1.323l.007.004c1.71.848 2.914 2.027 3.666 3.534.777 1.558 1.183 3.41 1.183 5.585 0 2.177-.406 3.995-1.177 5.49l-.002.003c-.727 1.425-1.914 2.551-3.627 3.367l-.004.002c-1.682.81-3.982 1.248-6.959 1.248Z" />
       </svg>
-      <main className="py-10 relative bg-white dark:bg-slate-900 dark:text-white">{props.children}</main>
+      <main className="py-10 relative bg-white dark:bg-slate-900 dark:text-white">
+        {props.children}
+      </main>
       <footer className="border-t dark:border-slate-700 w-full">
         <div className="w-full h-16 inline-flex justify-center items-center">
           <p className="text-sm">&copy; Copyright {new Date().getFullYear()} Ahmad Ridhoni</p>
