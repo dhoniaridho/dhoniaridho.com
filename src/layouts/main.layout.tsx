@@ -112,10 +112,10 @@ const MainLayout = (props: any) => {
           top: cursor.y,
           left: cursor.x
         }}
-        className="fixed w-8 h-8 bg-white rounded-full shadow-lg inset-0 z-50 opacity-50 ring-4 ring-offset-4 ring-offset-white ring-white"></motion.div>
+        className="fixed w-8 h-8 dark:bg-white bg-slate-900 rounded-full shadow-xl inset-0 z-50 opacity-50"></motion.div>
       <NextSeo
         title="Ahmad Ridhoni"
-        description="dhoniaridho(c)2022 Portfolio"
+        description="dhoniaridho ©️ 2022 Portfolio"
         defaultTitle="Ahmad Ridhoni  %s"
       />
       <motion.nav
