@@ -112,7 +112,7 @@ const MainLayout = (props: any) => {
           top: cursor.y,
           left: cursor.x
         }}
-        className="fixed w-8 h-8 dark:bg-white bg-slate-900 rounded-full shadow-xl inset-0 z-50 opacity-50"></motion.div>
+        className="hidden sm:block fixed w-8 h-8 dark:bg-white bg-slate-900 rounded-full shadow-xl inset-0 z-50 opacity-50"></motion.div>
       <NextSeo
         title="Ahmad Ridhoni"
         description="dhoniaridho ©️ 2022 Portfolio"
