@@ -4,7 +4,7 @@ specifiers:
   '@react-spring/parallax': 9.5.1
   '@react-spring/web': 9.5.1
   '@types/node': 17.0.36
-  '@types/react': 18.0.15
+  '@types/react': 18.0.16
   '@types/react-dom': 18.0.6
   '@types/styled-components': 5.1.25
   autoprefixer: 10.4.8
@@ -44,7 +44,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 17.0.36
-  '@types/react': 18.0.15
+  '@types/react': 18.0.16
   '@types/react-dom': 18.0.6
   '@types/styled-components': 5.1.25
   autoprefixer: 10.4.8_postcss@8.4.14
@@ -630,7 +630,7 @@ packages:
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.0.15
+      '@types/react': 18.0.16
       hoist-non-react-statics: 3.3.2
     dev: true
 
@@ -649,11 +649,11 @@ packages:
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 18.0.15
+      '@types/react': 18.0.16
     dev: true
 
-  /@types/react/18.0.15:
-    resolution: {integrity: sha512-iz3BtLuIYH1uWdsv6wXYdhozhqj20oD4/Hk2DNXIn1kFsmp9x8d9QB6FnPhfkbhd2PgEONt9Q1x/ebkwjfFLow==}
+  /@types/react/18.0.16:
+    resolution: {integrity: sha512-3vX1dzVucqc2nhXtzyaParTIIRZeNbisRqLE7QdeLomVybEyeiuAouzZXgz71P+2kbJOqj3dy0fzoATg2I06GQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -668,7 +668,7 @@ packages:
     resolution: {integrity: sha512-fgwl+0Pa8pdkwXRoVPP9JbqF0Ivo9llnmsm+7TCI330kbPIFd9qv1Lrhr37shf4tnxCOSu+/IgqM7uJXLWZZNQ==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 18.0.15
+      '@types/react': 18.0.16
       csstype: 3.1.0
     dev: true
 
