@@ -360,7 +360,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 
 export default Home;
 
-export async function getStaticProps({ locale }: GetServerSidePropsContext) {
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
   const projects = await fetcher();
   return {
     props: {
