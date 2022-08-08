@@ -57,7 +57,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
 
 export default Projects;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // `getStaticProps` is executed on the server side.
   const projects = await fetcher();
   return {
