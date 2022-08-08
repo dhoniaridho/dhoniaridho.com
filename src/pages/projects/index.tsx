@@ -1,34 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import { fetcher, Project, useProject } from "@/features/__shared__/hooks/useProjects";
 import MainLayout from "@/layouts/main.layout";
-import { useState } from "react";
-import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 
-const Projects = () => {
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      name: "DPM Poltekkes Semarang",
-      description: "Project web for organization DPM Poltekkes Semarang, using ReactJS and NextJS",
-      image: "https://picsum.photos/id/1/200/300",
-      link: "https://www.dpmpoltekkessmg.com",
-      tags: ["React JS", "Next JS", "Tailwind CSS"],
-      date: "2020-01-01",
-      category: "Frontend Development",
-      technologies: ["React JS", "Rest API", "Next JS"]
-    },
-    {
-      id: 2,
-      name: "Admin DPM Poltekkes Semarang",
-      description:
-        "Project web for organization DPM Poltekkes Semarang, using Laravel, Tailwind CSS & Alpine Js",
-      image: "https://picsum.photos/id/1/200/300",
-      link: "https://admin.dpmpoltekkessmg.com",
-      tags: ["Laravel", "Alpine JS", "Tailwind CSS"],
-      date: "2020-01-01",
-      category: "Frontend Development",
-      technologies: ["React JS", "Rest API", "Next JS"]
-    }
-  ]);
+const Projects = ({ projects }: { projects: Project[] }) => {
+  const { data, isLoading } = useProject(projects);
 
   return (
     <MainLayout>
@@ -36,8 +12,11 @@ const Projects = () => {
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-white">Projects</h1>
           <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {projects.map((project) => (
-              <div key={project.id} className="bg-white dark:bg-slate-900 dark:border-slate-700 border border-gray-200 shadow-md">
+            {isLoading && <div className="text-center">Loading...</div>}
+            {data?.map((project) => (
+              <div
+                key={project._id}
+                className="bg-white dark:bg-slate-900 dark:border-slate-700 border border-gray-200 shadow-md">
                 <a href="#">
                   <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </a>
@@ -77,3 +56,13 @@ const Projects = () => {
 };
 
 export default Projects;
+
+export async function getServerSideProps() {
+  // `getStaticProps` is executed on the server side.
+  const projects = await fetcher();
+  return {
+    props: {
+      projects
+    }
+  };
+}

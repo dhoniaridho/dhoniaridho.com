@@ -4,48 +4,19 @@ import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import getAge from "@/helpers/age";
+import { fetcher, Project, useProject } from "@/features/__shared__/hooks/useProjects";
 
-const Home: NextPage = () => {
+const Home = ({ projects }: { projects: Project[] }) => {
   const tabs = ["All", "Frontend", "Backend"];
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const t = useTranslations<"Home">("Home");
 
-  const PROJECTS = [
-    {
-      id: 1,
-      name: "DPM Poltekkes Semarang",
-      description: "Project web for organization DPM Poltekkes Semarang, using ReactJS and NextJS",
-      image: "https://picsum.photos/id/1/200/300",
-      link: "https://www.dpmpoltekkessmg.com",
-      tags: ["React JS", "Next JS", "Tailwind CSS"],
-      date: "2020-01-01",
-      category: "Frontend",
-      technologies: ["React JS", "Rest API", "Next JS", "Typescript"]
-    },
-    {
-      id: 2,
-      name: "Admin DPM Poltekkes Semarang",
-      description:
-        "Project web for organization DPM Poltekkes Semarang, using Laravel, Tailwind CSS & Alpine Js",
-      image: "https://picsum.photos/id/1/200/300",
-      link: "https://admin.dpmpoltekkessmg.com",
-      tags: ["Laravel", "Alpine JS", "Tailwind CSS"],
-      date: "2020-01-01",
-      category: "Backend",
-      technologies: ["React JS", "Rest API", "Next JS", "PHP"]
-    }
-  ];
-
-  const [projects, setProjects] = useState(PROJECTS);
-
   const handleTabChange = (category: string) => {
     setSelectedTab(category);
-    if (category == "All") return setProjects(PROJECTS);
-    setProjects(PROJECTS.filter((project) => project.category === category));
   };
 
   const container = {
@@ -67,6 +38,8 @@ const Home: NextPage = () => {
     hidden: { opacity: 0 },
     show: { opacity: 1 }
   };
+
+  const { data, isLoading } = useProject(projects);
 
   const { setTheme } = useTheme();
 
@@ -320,9 +293,9 @@ const Home: NextPage = () => {
                 initial="hidden"
                 animate="show"
                 className="grid md:grid-cols-3 gap-5 mt-16">
-                {projects.map((project) => (
+                {data.map((project) => (
                   <motion.div
-                    key={project.id}
+                    key={project._id}
                     variants={item}
                     className="bg-white dark:bg-slate-900 dark:text-white border dark:border-slate-700">
                     <a href="#">
@@ -387,9 +360,11 @@ const Home: NextPage = () => {
 
 export default Home;
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({ locale }: GetStaticPropsContext) {
+  const projects = await fetcher();
   return {
     props: {
+      projects,
       messages: (await import(`@/languages/${locale}/main.json`)).default
     }
   };

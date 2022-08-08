@@ -5,36 +5,38 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextIntlProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
+import { SWRConfig } from "swr";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
+  const [queryClient] = useState(() => new QueryClient());
+
   return (
-    <NextIntlProvider messages={pageProps.messages}>
-      <LazyMotion features={domAnimation}>
-        <AnimatePresence
-          initial={false}
-          presenceAffectsLayout={false}
-          onExitComplete={() => window.scrollTo(0, 0)}>
+    <QueryClientProvider client={queryClient}>
+      <NextIntlProvider messages={pageProps.messages}>
+        <LazyMotion features={domAnimation}>
           <ThemeProvider attribute="class">
             <Component {...pageProps} key={router.route} />
           </ThemeProvider>
-        </AnimatePresence>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-BND8XMV7PT"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-BND8XMV7PT"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-BND8XMV7PT');
         `}
-        </Script>
-      </LazyMotion>
-    </NextIntlProvider>
+          </Script>
+        </LazyMotion>
+      </NextIntlProvider>
+    </QueryClientProvider>
   );
 }
 
