@@ -1,11 +1,10 @@
 import "@/assets/css/globals.css";
 import type { AppProps } from "next/app";
-import { AnimatePresence, domAnimation, LazyMotion } from "framer-motion";
+import { domAnimation, LazyMotion } from "framer-motion";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextIntlProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
-import { SWRConfig } from "swr";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 
