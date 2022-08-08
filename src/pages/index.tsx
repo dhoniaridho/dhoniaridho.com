@@ -362,11 +362,9 @@ export default Home;
 
 export async function getStaticProps({ locale }: GetServerSidePropsContext) {
   const projects = await fetcher();
-  const messages = (await import(`@/languages/${locale}/main.json`)).default
   return {
     props: {
       projects,
-      messages
     }
   };
 }
