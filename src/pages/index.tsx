@@ -1,4 +1,4 @@
-import type { GetStaticPropsContext, NextPage } from "next";
+import type { GetServerSidePropsContext, GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
 import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
@@ -360,12 +360,13 @@ const Home = ({ projects }: { projects: Project[] }) => {
 
 export default Home;
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
   const projects = await fetcher();
+  const messages = (await import(`@/languages/${locale}/main.json`)).default
   return {
     props: {
       projects,
-      messages: (await import(`@/languages/${locale}/main.json`)).default
+      messages
     }
   };
 }
