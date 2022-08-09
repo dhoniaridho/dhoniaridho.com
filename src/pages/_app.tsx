@@ -7,9 +7,17 @@ import { NextIntlProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
+import "nprogress/nprogress.css";
+import Router from "next/router";
+import NProgress from "nprogress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  Router.events.on("routeChangeStart", () => NProgress.start());
+  Router.events.on("routeChangeComplete", () => NProgress.done());
+  Router.events.on("routeChangeError", () => NProgress.done());
+  NProgress.configure({ showSpinner: false });
 
   const [queryClient] = useState(() => new QueryClient());
 

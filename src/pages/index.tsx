@@ -52,6 +52,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
             <button onClick={() => setTheme("dark")}>Dark Mode</button>
           </div>
           <div className="w-1/2 aspect-square bg-gradient-to-tr from-violet-200 via-blue-300 to-violet-200 absolute opacity-30 -left-1/4 h-auto -top-10 rounded-full blur-3xl" />
+          <div className="w-1/2 aspect-square bg-green-200 absolute opacity-10 -right-1/4 h-auto -top-10 rounded-full blur-3xl" />
           <div className="h-96 md:h-full">
             <div className="relative rounded-lg w-full h-full overflow-hidden">
               <Image layout="fill" className="object-cover" src={Me.src} alt="Me" />
