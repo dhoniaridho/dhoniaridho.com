@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextIntlProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import "nprogress/nprogress.css";
 import Router from "next/router";
@@ -26,7 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextIntlProvider messages={pageProps.messages}>
         <LazyMotion features={domAnimation}>
           <ThemeProvider attribute="class">
-            <Component {...pageProps} key={router.route} />
+            <Hydrate state={pageProps.dehydratedState}>
+              <Component {...pageProps} key={router.route} />
+            </Hydrate>
           </ThemeProvider>
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-BND8XMV7PT"

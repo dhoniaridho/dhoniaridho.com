@@ -4,11 +4,11 @@ import Me from "@/assets/images/me.jpg";
 import MainLayout from "@/layouts/main.layout";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import getAge from "@/helpers/age";
-import { fetcher, Project, useProject } from "@/features/__shared__/hooks/useProjects";
+import { fetcher, Project, useProject } from "@/features/projects/hooks/useProjects";
 
 const Home = ({ projects }: { projects: Project[] }) => {
   const tabs = ["All", "Frontend", "Backend"];
@@ -39,7 +39,8 @@ const Home = ({ projects }: { projects: Project[] }) => {
     show: { opacity: 1 }
   };
 
-  const { data, isLoading } = useProject(projects);
+  const { data, isLoading, refetch } = useProject([]);
+
 
   const { setTheme } = useTheme();
 
@@ -294,7 +295,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
                 initial="hidden"
                 animate="show"
                 className="grid md:grid-cols-3 gap-5 mt-16">
-                {data.map((project) => (
+                {data?.map((project) => (
                   <motion.div
                     key={project._id}
                     variants={item}
@@ -362,11 +363,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 export default Home;
 
 export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
-  const projects = await fetcher();
-  const messages = (await import(`@/languages/${locale}/main.json`)).default
+  const messages = (await import(`@/languages/${locale}/main.json`)).default;
   return {
     props: {
-      projects,
       messages
     }
   };

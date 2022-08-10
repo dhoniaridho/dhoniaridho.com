@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { fetcher, Project, useProject } from "@/features/__shared__/hooks/useProjects";
+import { fetcher, Project, useProject } from "@/features/projects/hooks/useProjects";
 import MainLayout from "@/layouts/main.layout";
 import { BsArrowRight } from "react-icons/bs";
 

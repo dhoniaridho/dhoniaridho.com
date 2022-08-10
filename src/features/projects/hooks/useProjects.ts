@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import useSWR from "swr";
-import http from "../modules/http";
+import http from "@/modules/http";
 
 export interface Project {
   _id: string;
@@ -27,6 +26,6 @@ export const fetcher = async () => {
 
 export function useProject(initial: Project[]) {
   return useQuery([`projects`], fetcher, {
-    initialData: initial
+    initialData: initial,
   });
 }
