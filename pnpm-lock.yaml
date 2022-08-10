@@ -8,7 +8,7 @@ specifiers:
   '@types/nprogress': ^0.2.0
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
-  '@types/styled-components': 5.1.25
+  '@types/styled-components': 5.1.26
   autoprefixer: 10.4.8
   axios: ^0.27.2
   eslint: 8.16.0
@@ -56,7 +56,7 @@ devDependencies:
   '@types/node': 17.0.36
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
-  '@types/styled-components': 5.1.25
+  '@types/styled-components': 5.1.26
   autoprefixer: 10.4.8_postcss@8.4.16
   eslint: 8.16.0
   eslint-config-next: 12.2.4_vjep2yp2sits3sqnodefgcbnfi
@@ -701,8 +701,8 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@types/styled-components/5.1.25:
-    resolution: {integrity: sha512-fgwl+0Pa8pdkwXRoVPP9JbqF0Ivo9llnmsm+7TCI330kbPIFd9qv1Lrhr37shf4tnxCOSu+/IgqM7uJXLWZZNQ==}
+  /@types/styled-components/5.1.26:
+    resolution: {integrity: sha512-KuKJ9Z6xb93uJiIyxo/+ksS7yLjS1KzG6iv5i78dhVg/X3u5t1H7juRWqVmodIdz6wGVaIApo1u01kmFRdJHVw==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 18.0.17
