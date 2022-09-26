@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@react-spring/parallax': 9.5.1
+  '@react-spring/parallax': 9.5.5
   '@react-spring/web': 9.5.4
   '@tanstack/react-query': 4.6.0
   '@types/node': 17.0.36
@@ -34,7 +34,7 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
-  '@react-spring/parallax': 9.5.1_biqbaboplfbrettd7655fr4n2y
+  '@react-spring/parallax': 9.5.5_biqbaboplfbrettd7655fr4n2y
   '@react-spring/web': 9.5.4_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query': 4.6.0_biqbaboplfbrettd7655fr4n2y
   '@types/nprogress': 0.2.0
@@ -538,8 +538,18 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@react-spring/shared': 9.5.4_react@18.2.0
+      '@react-spring/shared': 9.5.5_react@18.2.0
       '@react-spring/types': 9.5.4
+      react: 18.2.0
+    dev: false
+
+  /@react-spring/animated/9.5.5_react@18.2.0:
+    resolution: {integrity: sha512-glzViz7syQ3CE6BQOwAyr75cgh0qsihm5lkaf24I0DfU63cMm/3+br299UEYkuaHNmfDfM414uktiPlZCNJbQA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@react-spring/shared': 9.5.5_react@18.2.0
+      '@react-spring/types': 9.5.5
       react: 18.2.0
     dev: false
 
@@ -550,39 +560,41 @@ packages:
     dependencies:
       '@react-spring/animated': 9.5.4_react@18.2.0
       '@react-spring/rafz': 9.5.4
-      '@react-spring/shared': 9.5.4_react@18.2.0
+      '@react-spring/shared': 9.5.5_react@18.2.0
       '@react-spring/types': 9.5.4
       react: 18.2.0
     dev: false
 
-  /@react-spring/parallax/9.5.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-tYNcJbW8nORrc7iZN3L+hE090wi9su4nRmsx2iU6P5tkmW/qQskSTmAXu7Y+j62xVVYeFh9EafqwM/bxDSUw0w==}
+  /@react-spring/core/9.5.5_react@18.2.0:
+    resolution: {integrity: sha512-shaJYb3iX18Au6gkk8ahaF0qx0LpS0Yd+ajb4asBaAQf6WPGuEdJsbsNSgei1/O13JyEATsJl20lkjeslJPMYA==}
     peerDependencies:
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@react-spring/shared': 9.5.1_react@18.2.0
-      '@react-spring/web': 9.5.4_biqbaboplfbrettd7655fr4n2y
+      '@react-spring/animated': 9.5.5_react@18.2.0
+      '@react-spring/rafz': 9.5.5
+      '@react-spring/shared': 9.5.5_react@18.2.0
+      '@react-spring/types': 9.5.5
       react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@react-spring/rafz/9.5.1:
-    resolution: {integrity: sha512-sCqRZUdJRCmkBxyDoTDQZ0xTQU8aJZoVAy/VJcY44JcYBimoPtQevaT2yNRc8tW2ZQlbqK/O78yffy9e/U9gTQ==}
+  /@react-spring/parallax/9.5.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Mx5DxIVkASoK+lDe/OX88Tyd4ibgwvl2Gov540kCdJwYRvOdsxinnTa1R7d4XyNv6kkKce1bstOKHdyWTCKu7g==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@react-spring/shared': 9.5.5_react@18.2.0
+      '@react-spring/web': 9.5.5_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@react-spring/rafz/9.5.4:
     resolution: {integrity: sha512-Tmev2j7sq2FW3ISUClnNS0PhkCsBfPPpkHVMxz8mkIKzMGXWskd0GblOoPVJiWvhbccaX/NYd+ykJqJ1gY0v9g==}
     dev: false
 
-  /@react-spring/shared/9.5.1_react@18.2.0:
-    resolution: {integrity: sha512-c7aB74XPtzvtJfzsLlxesKg9+eZTkyo6et+1BCTJ9Jwvk9v6zrTxZqs9VmywDsLhFeBdVhx2mKrxY03WiuA+Jg==}
-    peerDependencies:
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-    dependencies:
-      '@react-spring/rafz': 9.5.1
-      '@react-spring/types': 9.5.4
-      react: 18.2.0
+  /@react-spring/rafz/9.5.5:
+    resolution: {integrity: sha512-F/CLwB0d10jL6My5vgzRQxCNY2RNyDJZedRBK7FsngdCmzoq3V4OqqNc/9voJb9qRC2wd55oGXUeXv2eIaFmsw==}
     dev: false
 
   /@react-spring/shared/9.5.4_react@18.2.0:
@@ -595,8 +607,22 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@react-spring/shared/9.5.5_react@18.2.0:
+    resolution: {integrity: sha512-YwW70Pa/YXPOwTutExHZmMQSHcNC90kJOnNR4G4mCDNV99hE98jWkIPDOsgqbYx3amIglcFPiYKMaQuGdr8dyQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@react-spring/rafz': 9.5.5
+      '@react-spring/types': 9.5.5
+      react: 18.2.0
+    dev: false
+
   /@react-spring/types/9.5.4:
     resolution: {integrity: sha512-dzcGxqL1kPKociXK+pcq5ley77cWDWiphfv8OREv8dAZS1dKDTJq1zVy7ZD5ocyMtKMZw/7AcOdIJ1H80Dp56g==}
+    dev: false
+
+  /@react-spring/types/9.5.5:
+    resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
   /@react-spring/web/9.5.4_biqbaboplfbrettd7655fr4n2y:
@@ -609,6 +635,20 @@ packages:
       '@react-spring/core': 9.5.4_react@18.2.0
       '@react-spring/shared': 9.5.4_react@18.2.0
       '@react-spring/types': 9.5.4
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@react-spring/web/9.5.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-+moT8aDX/ho/XAhU+HRY9m0LVV9y9CK6NjSRaI+30Re150pB3iEip6QfnF4qnhSCQ5drpMF0XRXHgOTY/xbtFw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@react-spring/animated': 9.5.5_react@18.2.0
+      '@react-spring/core': 9.5.5_react@18.2.0
+      '@react-spring/shared': 9.5.5_react@18.2.0
+      '@react-spring/types': 9.5.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
