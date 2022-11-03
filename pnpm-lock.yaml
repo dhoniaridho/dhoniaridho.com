@@ -18,7 +18,7 @@ specifiers:
   framer-motion: 6.5.1
   husky: 8.0.1
   next: 12.3.1
-  next-intl: 2.7.4
+  next-intl: 2.9.1
   next-seo: 5.5.0
   next-themes: 0.2.0
   nprogress: 0.2.0
@@ -41,7 +41,7 @@ dependencies:
   axios: 0.27.2
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
-  next-intl: 2.7.4_next@12.3.1+react@18.2.0
+  next-intl: 2.9.1_next@12.3.1+react@18.2.0
   next-seo: 5.5.0_azq6kxkn3od7qdylwkyksrwopy
   next-themes: 0.2.0_azq6kxkn3od7qdylwkyksrwopy
   nprogress: 0.2.0
@@ -2145,16 +2145,16 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
-  /next-intl/2.7.4_next@12.3.1+react@18.2.0:
-    resolution: {integrity: sha512-fspmOzhInd/m+cV3Qj6FzjfDIjEtNTS6Vi4Xv+/59ReZvcW9uGmn/py0NkltQnf5Oefl0RUZGdjbd+t6+G+PMw==}
+  /next-intl/2.9.1_next@12.3.1+react@18.2.0:
+    resolution: {integrity: sha512-/OPaH5T+jOHXEZJfCzfl+ZkmjcNQOvb7DNR0SHSbtzYk/9IqjLFSLlxJvj4JPbW9xivzZbPCdgT5+yGzI2Uk0w==}
     engines: {node: '>=10'}
     peerDependencies:
-      next: ^10.0.0 || ^11.0.0 || ^12.0.0
+      next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       next: 12.3.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
-      use-intl: 2.7.4_react@18.2.0
+      use-intl: 2.9.1_react@18.2.0
     dev: false
 
   /next-seo/5.5.0_azq6kxkn3od7qdylwkyksrwopy:
@@ -2914,8 +2914,8 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /use-intl/2.7.4_react@18.2.0:
-    resolution: {integrity: sha512-Ivo2dIUFTyLCj6YJ+fA4jsDggDQhUQSLT1OoXP7qurCAueOWFX6QaN/pL3cDR6z9gM7nVQH83piRvuBJTHjQzg==}
+  /use-intl/2.9.1_react@18.2.0:
+    resolution: {integrity: sha512-eAveKBEbFjzzS4BWx8ET3/reyvCN/fBQbFgYYd51fnIb2SlmfDA1B6c9DZPthnyvjzZLfSAXShn0+dN4cQAeIg==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
