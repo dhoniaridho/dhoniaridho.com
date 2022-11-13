@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@react-spring/parallax': 9.5.1
   '@react-spring/web': 9.5.4
-  '@tanstack/react-query': 4.6.0
+  '@tanstack/react-query': 4.16.1
   '@types/node': 17.0.36
   '@types/nprogress': 0.2.0
   '@types/react': 18.0.21
@@ -36,7 +36,7 @@ specifiers:
 dependencies:
   '@react-spring/parallax': 9.5.1_biqbaboplfbrettd7655fr4n2y
   '@react-spring/web': 9.5.4_biqbaboplfbrettd7655fr4n2y
-  '@tanstack/react-query': 4.6.0_biqbaboplfbrettd7655fr4n2y
+  '@tanstack/react-query': 4.16.1_biqbaboplfbrettd7655fr4n2y
   '@types/nprogress': 0.2.0
   axios: 0.27.2
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
@@ -623,12 +623,12 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@tanstack/query-core/4.6.0:
-    resolution: {integrity: sha512-8b+vwooh8b4z1bIT3Ca7OVSyARM5JNbXi6F+g5VLYiflRd0AtJ+koqhin7UGhR11bbypmzVRKllWHwexWjKjDg==}
+  /@tanstack/query-core/4.15.1:
+    resolution: {integrity: sha512-+UfqJsNbPIVo0a9ANW0ZxtjiMfGLaaoIaL9vZeVycvmBuWywJGtSi7fgPVMCPdZQFOzMsaXaOsDtSKQD5xLRVQ==}
     dev: false
 
-  /@tanstack/react-query/4.6.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ZIx8EfRBGagxw+3onFb//Fnv0hhXDj/UHIYovPGwHdancAG9ZL4D0ymUan4cXJib/L0rGPzYFvET/yTEIPPXAw==}
+  /@tanstack/react-query/4.16.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-PDE9u49wSDykPazlCoLFevUpceLjQ0Mm8i6038HgtTEKb/aoVnUZdlUP7C392ds3Cd75+EGlHU7qpEX06R7d9Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -639,7 +639,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.6.0
+      '@tanstack/query-core': 4.15.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
