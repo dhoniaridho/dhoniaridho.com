@@ -19,7 +19,7 @@ specifiers:
   husky: 8.0.1
   next: 13.0.6
   next-intl: 2.7.4
-  next-seo: 5.5.0
+  next-seo: 5.15.0
   next-themes: 0.2.0
   nprogress: 0.2.0
   polished: 4.2.2
@@ -42,7 +42,7 @@ dependencies:
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   next: 13.0.6_biqbaboplfbrettd7655fr4n2y
   next-intl: 2.7.4_next@13.0.6+react@18.2.0
-  next-seo: 5.5.0_6jx7hpii6hgsrmhxgqrmo3277u
+  next-seo: 5.15.0_6jx7hpii6hgsrmhxgqrmo3277u
   next-themes: 0.2.0_6jx7hpii6hgsrmhxgqrmo3277u
   nprogress: 0.2.0
   polished: 4.2.2
@@ -2228,8 +2228,8 @@ packages:
       use-intl: 2.7.4_react@18.2.0
     dev: false
 
-  /next-seo/5.5.0_6jx7hpii6hgsrmhxgqrmo3277u:
-    resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
+  /next-seo/5.15.0_6jx7hpii6hgsrmhxgqrmo3277u:
+    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
