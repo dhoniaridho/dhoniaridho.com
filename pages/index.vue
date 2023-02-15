@@ -1,21 +1,23 @@
 <template>
     <section class="relative w-full h-screen">
-        <div class="container mx-auto relative h-full">
+        <div class="container mx-auto relative h-full p-5 py-20">
             <div class="flex gap-1 flex-col">
                 <div class="py-20">
-                    <p class="text-9xl font-bold">HELLO I'AM</p>
+                    <p class="text-5xl md:text-9xl font-bold">HELLO I'AM</p>
                     <span class="text-sm flex">
-                        <p class="text-9xl font-bold">DHONIARIDHO</p>
+                        <p class="text-5xl md:text-9xl font-bold text-sky-500">
+                            DHONIARIDHO
+                        </p>
                         <a
                             href="https://github.com/dhoniarihdo"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <icon class="h-16" size="24" name="uil:github" />
+                            <icon class="h-16 text-sm md:text-6xl" size="20" name="uil:github" />
                         </a>
                     </span>
                 </div>
-                <p class="text-7xl font-semibold uppercase w-fit h-fit">
+                <p class="md:text-7xl font-semibold uppercase w-fit h-fit">
                     Building Dynamic and User-Friendly Websites with
                     Cutting-Edge Technology
                 </p>
@@ -48,7 +50,7 @@
                     solutions.
                 </p>
             </div>
-            <div class="row-span-2 md:border-l md:pl-10">
+            <div class="row-span-2 md:border-l border-slate-800 md:pl-10">
                 <h3 class="text-5xl font-extrabold uppercase">EXPERIENCES</h3>
                 <ul class="mt-10">
                     <li class="flex border-t-4 border-slate-500 py-5">
@@ -142,17 +144,6 @@
                             />
                         </div>
                         <p>Tailwind CSS</p>
-                    </li>
-                    <li>
-                        <div
-                            class="w-20 h-20 rounded-lg flex justify-center items-center mb-4"
-                        >
-                            <img
-                                src="https://raw.githubusercontent.com/emotion-js/emotion/main/emotion.png"
-                                alt=""
-                            />
-                        </div>
-                        <p>Emotion CSS</p>
                     </li>
                     <li>
                         <div
@@ -262,6 +253,17 @@
                             class="w-20 h-20 rounded-lg flex justify-center items-center mb-4"
                         >
                             <img
+                                src="@/assets/images/skills/go.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>Go</p>
+                    </li>
+                    <li>
+                        <div
+                            class="w-20 h-20 rounded-lg flex justify-center items-center mb-4"
+                        >
+                            <img
                                 src="https://www.php.net/images/logos/new-php-logo.svg"
                                 alt=""
                             />
@@ -274,18 +276,18 @@
     </section>
     <section class="py-20 px-5 relative max-h-screen overflow-hidden">
         <div
-            class="w-1/2 blur-3xl bg-gradient-to-tr scale-125 from-red-200 via-blue-300 to-violet-200 absolute opacity-20 -right-1/4 h-auto rounded-full"
+            class="w-1/2 blur-3xl bg-gradient-to-tr scale-125 from-red-200/20 via-blue-300/20 to-violet-200/20 absolute opacity-20 -right-1/4 h-auto rounded-full bg-opacity-25 backdrop-blur-lg"
         />
         <div class="container mx-auto grid gap-20 relative">
             <div class="max-w-7xl mx-auto">
                 <div class="flex justify-center items-center">
-                    <h3 class="text-7xl font-bold mb-5 uppercase">
+                    <h3 class="text-4xl md:text-7xl font-bold mb-5 uppercase">
                         What can I do for you?
                     </h3>
                 </div>
                 <div class="grid md:grid-cols-3 gap-4 mt-20">
                     <div
-                        class="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col"
+                        class="aspect-square bg-black/20 backdrop-blur-md shadow-xl rounded-lg p-5 flex flex-col"
                     >
                         <div class="mb-5">
                             <svg
@@ -324,25 +326,25 @@
                             <ul class="flex gap-2 text-xs uppercase">
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >HTML</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >CSS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >JAVASCRIPT</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >TYPESCRIPT</span
                                     >
                                 </li>
@@ -350,7 +352,7 @@
                         </div>
                     </div>
                     <div
-                        class="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col"
+                        class="aspect-square bg-black/20 backdrop-blur-md shadow-xl rounded-lg p-5 flex flex-col"
                     >
                         <div class="mb-5">
                             <svg
@@ -387,25 +389,25 @@
                             <ul class="flex gap-2 text-xs uppercase">
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >Node JS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >PHP</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >Deno</span
                                     >
                                 </li>
                                 <li class="hidden">
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full"
                                         >Go</span
                                     >
                                 </li>
@@ -413,7 +415,7 @@
                         </div>
                     </div>
                     <div
-                        class="aspect-square bg-white shadow-xl rounded-lg p-5 flex flex-col"
+                        class="aspect-square bg-black/20 backdrop-blur-md shadow-xl rounded-lg p-5 flex flex-col"
                     >
                         <div class="mb-5">
                             <svg
@@ -448,37 +450,37 @@
                             <ul class="flex gap-3 text-xs flex-wrap uppercase">
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >Laravel</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >Vue JS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >React JS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >Nest JS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >Next JS</span
                                     >
                                 </li>
                                 <li>
                                     <span
-                                        class="px-3 py-1 bg-slate-100 rounded-full whitespace-nowrap"
+                                        class="px-3 py-1 bg-slate-800 backdrop-blur-3xl shadow-xl rounded-full whitespace-nowrap"
                                         >Nuxt JS</span
                                     >
                                 </li>
@@ -493,18 +495,18 @@
         <div class="container mx-auto relative">
             <div class="absolute w-full h-full px-3">
                 <div
-                    class="bg-gradient-to-tr from-violet-300 via-blue-300 to-violet-400 rounded-2xl shadow-md shadow-violet-10 w-full h-full container mx-auto"
+                    class="bg-gradient-to-tr from-violet-300/40 via-blue-300/40 to-violet-400/40 backdrop-blur-lg rounded-2xl shadow-md shadow-violet-10 w-full h-full container mx-auto"
                 ></div>
             </div>
-            <div class="relative py-16 px-10">
+            <div class="relative py-10 px-10">
                 <div>
                     <h3
-                        class="text-4xl font-extrabold leading-loose text-blue-900"
+                        class="text-4xl font-extrabold leading-loose text-slate-200"
                     >
-                        Get in touch with me<span class="text-blue-900">.</span>
+                        Get in touch with me<span class="text-slate-200">.</span>
                     </h3>
                     <div
-                        class="border-b border-blue-900 mb-10 max-w-[10rem] w-full"
+                        class="border-b-2 border-slate-200 mb-10 max-w-[10rem] w-full"
                     ></div>
                 </div>
                 <p class="max-w-lg">
@@ -512,9 +514,9 @@
                     and we'll get back to you soon to discuss what we can do
                     together.
                 </p>
-                <p class="mt-8 border-b-2 border-blue-800 w-fit">
+                <p class="mt-8 border-b-2 border-slate-100 w-fit">
                     <a
-                        class="text-2xl md:text-3xl text-blue-800 font-bold leading-snug"
+                        class="text-2xl md:text-3xl text-slate-100 font-bold leading-snug"
                         href="mailto:hello@dhoniaridho.com"
                         >hello@dhoniaridho.com</a
                     >
