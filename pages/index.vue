@@ -9,7 +9,7 @@
                             DHONIARIDHO
                         </p>
                         <a
-                            href="https://github.com/dhoniarihdo"
+                            href="https://github.com/dhoniaridho"
                             target="_blank"
                             rel="noreferrer"
                         >
