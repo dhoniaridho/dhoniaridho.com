@@ -122,7 +122,7 @@
                                 >
                                     Momofin Go
                                 </a>
-                                using Vue JS, Typescript.
+                                using Vue JS, Typescript, Nest JS, Express JS.
                             </p>
                         </div>
                     </li>
