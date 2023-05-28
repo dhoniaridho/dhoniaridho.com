@@ -10,7 +10,7 @@ specifiers:
   '@types/react-dom': 18.0.6
   '@types/styled-components': 5.1.26
   autoprefixer: 10.4.8
-  axios: 0.27.2
+  axios: 1.4.0
   eslint: 8.16.0
   eslint-config-next: 13.0.6
   eslint-config-prettier: 8.5.0
@@ -38,7 +38,7 @@ dependencies:
   '@react-spring/web': 9.5.4_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query': 4.6.0_biqbaboplfbrettd7655fr4n2y
   '@types/nprogress': 0.2.0
-  axios: 0.27.2
+  axios: 1.4.0
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   next: 13.0.6_biqbaboplfbrettd7655fr4n2y
   next-intl: 2.7.4_next@13.0.6+react@18.2.0
@@ -918,11 +918,12 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /axios/0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+  /axios/1.4.0:
+    resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
     dependencies:
       follow-redirects: 1.15.1
       form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -2585,6 +2586,10 @@ packages:
       object-assign: 4.1.1
       react-is: 16.13.1
     dev: true
+
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+    dev: false
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
